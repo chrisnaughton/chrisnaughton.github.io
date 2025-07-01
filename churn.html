@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction & Driver Analysis</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            text-align: left;
+        }
+        h3 {
+            color: #3498db;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            text-align: left;
+        }
+        p, ul, ol {
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 1.05em;
+            text-align: left;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+        .code-block {
+            background-color: #eef;
+            border: 1px solid #ddd;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            overflow-x: auto;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            color: #333;
+        }
+        .nav-links {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .nav-links a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        .nav-links a:hover {
+            background-color: #2980b9;
+        }
+        .project-links {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .project-links a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 8px 15px;
+            background-color: #5cb85c; /* Green for code links */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .project-links a:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Churn Prediction & Driver Analysis</h1>
+        <p>This project addresses the critical business challenge of customer churn within a telecommunications context, developing a predictive model and identifying key retention/attrition drivers.</p>
+
+        <div class="project-links">
+            <!-- LINK TO THE CHURN REPOSITORY -->
+            <a href="https://github.com/kastorwing/Telecom_Churn_Prediction" target="_blank">View Project Code on GitHub</a>
+            <!-- If you have a live notebook viewer (e.g., nbviewer.jupyter.org), link it here -->
+            <!-- <a href="https://nbviewer.jupyter.org/github/kastorwing/Telecom_Churn_Prediction/blob/main/notebooks/churn_prediction_analysis.ipynb" target="_blank">View Notebook</a> -->
+        </div>
+
+        <h2>Introduction</h2>
+        <p>For any subscription-based company, understanding why customers leave (churn) is paramount to future revenue and growth. This project addresses that critical challenge by developing a robust predictive model for customer churn within a telecom context. My goal was to not only accurately forecast churn but also to identify the key factors driving customer retention and attrition, enabling the development of targeted intervention strategies.</p>
+        <p>The analysis utilizes the "Customer Churn Prediction: Analysis," a synthetic dataset available on Kaggle.</p>
+
+        <h2>Methodology</h2>
+        <p>The project workflow encompassed several key stages:</p>
+        <ol>
+            <li><strong>Data Preparation:</strong> Initial steps involved addressing missing values, converting data types, and ensuring overall data cleanliness.</li>
+            <li><strong>Feature Engineering:</strong> This crucial phase involved transforming existing data into more insightful features. This included:
+                <ul>
+                    <li><strong>Grouping continuous variables:</strong> Categorizing customer age (e.g., into '25-39', '40-54' etc.) and tenure (e.g., 'under 1 year', '1-3 years') into distinct groups.</li>
+                    <li><strong>Creating composite features:</strong> Developing variables like <code>Services_Count</code> (total core services subscribed to) and an <strong>interaction term</strong> (e.g., to understand how customer tenure specifically impacts those on a month-to-month contract).</li>
+                </ul>
+            </li>
+            <li><strong>Model Development:</strong> A <strong>Logistic Regression</strong> model was built for churn prediction, chosen for its strong interpretability.</li>
+            <li><strong>Feature Importance Analysis:</strong> Post-modeling, the model's coefficients were analyzed to quantitatively identify the most influential drivers of churn and retention.</li>
+        </ol>
+
+        <h2>Key Findings & Outcome</h2>
+        <p>The developed Logistic Regression model proved to be highly effective, achieving <strong>98.5% overall accuracy</strong>. Its performance in identifying churners was exceptional, with <strong>100% precision</strong> (meaning nearly all predicted churners actually churned) and <strong>98% recall</strong> (correctly identifying almost all actual churners).</p>
+
+        <h3>Key Features Driving Customer Churn:</h3>
+        <ul>
+            <li><strong>Month-to-Month Contracts:</strong> Customers on these contracts are highly prone to churn. This risk intensifies the longer they remain on this flexible plan, indicating a compounding effect of contract type and tenure.</li>
+            <li><strong>High Monthly Charges:</strong> A strong indicator of churn, suggesting potential price sensitivity or a perceived lack of value for the services received.</li>
+            <li><strong>Lack of Tech Support:</strong> Customers without technical support services are significantly more likely to churn, underscoring the importance of robust customer assistance.</li>
+            <li><strong>New Customers (Under 1 Year Tenure):</strong> This group exhibits a higher inherent churn risk, highlighting the critical need for proactive engagement during the initial customer lifecycle phase.</li>
+        </ul>
+
+        <h3>Key Features Driving Customer Retention:</h3>
+        <ul>
+            <li><strong>Tech Support Subscriptions:</strong> Customers actively subscribing to technical support demonstrate significantly higher retention rates.</li>
+            <li><strong>Longer-Term Contracts (One-Year/Two-Year):</strong> These contract types provide substantial stability and effectively reduce churn compared to month-to-month options.</li>
+            <li><strong>Mid-to-Long Term Tenure:</strong> Customers who have stayed for 1-3 years or over 3 years exhibit strong loyalty, becoming less likely to churn over time.</li>
+        </ul>
+
+        <h2>Additional Finding: The Nuance of Internet Service</h2>
+        <p>Beyond the primary churn drivers, an intriguing pattern emerged concerning <strong>Internet Service Type</strong>.</p>
+        <p>While customers who <em>only</em> subscribe to our phone service (i.e., no internet service through us) show a higher propensity to stay, customers <em>with</em> any form of our internet service (including both Fiber Optic and DSL) exhibit a minor increased churn risk. This counter-intuitive finding is significant: it suggests customers might be finding more reliable or cheaper internet options elsewhere, making this a critical area for competitive analysis and re-evaluation of our internet service's value proposition.</p>
+
+        <h2>Recommendations</h2>
+        <p>Based on these insights, I would advise the telecom company to:</p>
+        <ul>
+            <li><strong>Target Month-to-Month Customers:</strong> Implement proactive retention campaigns for month-to-month customers, especially as they approach the 6-12 month mark. Highlight long-term contract benefits and exclusive incentives.</li>
+            <li><strong>Enhance Tech Support & Contract Promotion:</strong> More aggressively promote the value and benefits of Tech Support subscriptions and longer-term contract options (One-Year, Two-Year).</li>
+            <li><strong>Investigate Internet Service Competitiveness:</strong> Conduct a deeper analysis into customer satisfaction with current internet services and competitor pricing/reliability. If internet service is indeed a churn driver, it likely points to external market pressures or perceived service gaps.</li>
+        </ul>
+
+        <h2>Technologies Used</h2>
+        <ul>
+            <li><strong>Python:</strong> Programming Language</li>
+            <li><strong>Pandas:</strong> Data manipulation and analysis</li>
+            <li><strong>NumPy:</strong> Numerical computing</li>
+            <li><strong>Scikit-learn:</strong> Machine learning model development (Logistic Regression, preprocessing)</li>
+            <li><strong>Matplotlib:</strong> Data visualization</li>
+            <li><strong>Seaborn:</strong> Enhanced data visualization</li>
+        </ul>
+
+        <h2>How to Run the Analysis</h2>
+        <p>To replicate and explore this project locally:</p>
+        <div class="code-block">
+            <pre><code>git clone https://github.com/kastorwing/Telecom_Churn_Prediction.git
+cd Telecom_Churn_Prediction
+python -m venv venv
+source venv/bin/activate  # On Windows: `venv\Scripts\activate`
+pip install -r requirements.txt
+jupyter notebook
+            </code></pre>
+        </div>
+        <p>Then open the `churn_prediction_analysis.ipynb` file.</p>
+        <p><em>(Note: Ensure your dataset CSV file, e.g., `WA_Fn-UseC_-Telco-Customer-Churn.csv`, is in the `data/` directory as structured in the repository.)</em></p>
+
+
+        <div class="nav-links">
+            <a href="index.html">Back to Portfolio Home</a>
+        </div>
+    </div>
+</body>
+</html>
