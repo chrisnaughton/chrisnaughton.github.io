@@ -108,19 +108,31 @@
             background-color: #2980b9;
         }
         .project-icon {
-            width: 80px; /* Increased size for better visibility */
-            height: 80px; /* Increased size for better visibility */
-            object-fit: contain; /* Ensures image fits without cropping */
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
             margin-bottom: 15px;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            border-radius: 8px; /* Slightly rounded corners for icons */
+            border-radius: 8px;
         }
         .footer {
             margin-top: 50px;
             font-size: 0.9em;
             color: #888;
+        }
+        /* New style for centered resume card */
+        .resume-card-wrapper {
+            grid-column: 1 / -1; /* Spans all columns */
+            display: flex;
+            justify-content: center;
+            margin-top: 25px; /* Add some space from the grid above */
+        }
+        .resume-card-wrapper .project-card {
+            width: 300px; /* Adjust width as needed for the centered card */
+            max-width: 100%;
+            margin: 0 auto; /* Center the card itself */
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -146,7 +158,7 @@
         <div class="project-grid">
             <!-- Project 1: Superstore Profitability Analysis -->
             <div class="project-card">
-                <img src="images/Super Store.jpg" alt="Superstore Icon" class="project-icon">
+                <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
                 <h3>Superstore Profitability Analysis</h3>
                 <p>An in-depth analysis of the Superstore dataset to diagnose profit erosion, identify strategic opportunities, and provide actionable recommendations for enhancing overall business profitability.</p>
                 <a href="superstore.html" class="button">View Project</a>
@@ -154,7 +166,7 @@
 
             <!-- Project 2: Telecom Customer Churn Prediction & Driver Analysis -->
             <div class="project-card">
-                <img src="images/Chrun.jpg" alt="Churn Icon" class="project-icon">
+                <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
                 <h3>Telecom Customer Churn Prediction & Driver Analysis</h3>
                 <p>Development of a Logistic Regression model to accurately forecast customer churn in a telecom context and identify key factors driving retention and attrition.</p>
                 <a href="churn.html" class="button">View Project</a>
@@ -162,15 +174,18 @@
 
             <!-- Project 3: A/B/C Testing Analysis -->
             <div class="project-card">
-                <img src="images/Generic_Fastfood-1.jpg" alt="A/B Testing Icon" class="project-icon">
+                <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
                 <h3>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</h3>
                 <p>Statistical analysis of three distinct fast-food promotional strategies to determine their effectiveness in driving sales and provide data-driven recommendations.</p>
                 <a href="ab_testing.html" class="button">View Project</a>
             </div>
+        </div>
 
-            <!-- New Card: My Resume -->
+        <!-- New Wrapper for Centered Resume Card -->
+        <div class="resume-card-wrapper">
+            <!-- Resume Card -->
             <div class="project-card">
-                <img src="images/resume-icon.png" alt="Resume Icon" class="project-icon"> <!-- Placeholder for a generic resume icon -->
+                <img src="images/Resume.jpg" alt="Resume Icon" class="project-icon">
                 <h3>My Resume</h3>
                 <p>A detailed overview of my professional experience, skills, and qualifications in data science and analytics.</p>
                 <a href="resume.html" class="button">View Resume</a>
