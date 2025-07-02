@@ -87,6 +87,21 @@
         .project-links a:hover {
             background-color: #4cae4c;
         }
+        .dashboard-talking-points {
+            text-align: left;
+            margin: 0 auto 30px auto;
+            max-width: 900px; /* Adjust as needed */
+            padding: 0 15px;
+        }
+        .dashboard-talking-points ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .dashboard-talking-points li {
+            margin-bottom: 8px;
+            color: #444;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -97,19 +112,54 @@
 
         <div class="project-links">
             <a href="./Superstore-Profitability-Analysis/" target="_blank">View Project Code on GitHub</a>
-            </div>
+            <!-- Add link to your Tableau Public workbook if you want a direct link to the whole workbook -->
+            <!-- <a href="https://public.tableau.com/profile/chrisnaughton#!/vizhome/SQLDashboards/Dashboard1" target="_blank">View Full Workbook on Tableau Public</a> -->
+        </div>
 
         <h2>Dashboard 1: Executive Overview & Business Health</h2>
+        <div class="dashboard-talking-points">
+            <ul>
+                <li><strong>Key Performance Indicators (KPIs):</strong> Displays total sales, gross profit margin, and total profit.</li>
+                <li><strong>Overall Trends:</strong> Visualizes the overall gross profit margin trend and total profit/sales for every quarter using line graphs.</li>
+                <li><strong>Segment Performance:</strong> Features a bar chart breaking down performance by customer segment (Consumer, Corporate, Home Office).</li>
+            </ul>
+        </div>
         <div class='tableauPlaceholder' id='viz1751392352194' style='position: relative'>
             <noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
         <script type='text/javascript'>var divElement = document.getElementById('viz1751392352194'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='1127px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+
         <h2>Dashboard 2: Discount Impact & Transactional Loss</h2>
+        <div class="dashboard-talking-points">
+            <ul>
+                <li><strong>Loss-Leading Products:</strong> Identifies specific products causing losses, with average discount rates highlighted.</li>
+                <li><strong>Sub-Category Profitability:</strong> Shows profitability by sub-category, clearly marking "Tables" as a significant loss.</li>
+                <li><strong>Discount Impact:</strong> A histogram visualizes the distribution of unprofitable transactions by discount level.</li>
+                <li><strong>Unprofitable Hotspots:</strong> A heatmap pinpoints areas with high concentrations of unprofitable transactions.</li>
+            </ul>
+        </div>
         <div class='tableauPlaceholder' id='viz1751392546987' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Discounts&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards-Discounts&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Discounts&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
         <script type='text/javascript'>var divElement = document.getElementById('viz1751392546987'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='1227px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+
         <h2>Dashboard 3: Geographic Performance & Profitability</h2>
+        <div class="dashboard-talking-points">
+            <ul>
+                <li><strong>Country-Level Losses:</strong> Bar chart organizing countries by region that are costing the business money, with average discounts in green.</li>
+                <li><strong>Global Profit Map:</strong> A color-coded map of the world, ranging from orange (biggest loss) to blue (biggest profit), illustrating geographic profitability.</li>
+                <li><strong>Regional Metrics:</strong> A chart detailing average discount, profit, and sales for each region.</li>
+            </ul>
+        </div>
         <div class='tableauPlaceholder' id='viz1751392608446' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards-Suggestions&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
         <script type='text/javascript'>var divElement = document.getElementById('viz1751392608446'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='977px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+
         <h2>Dashboard 4: Strategic Opportunities & Overall Trends</h2>
+        <div class="dashboard-talking-points">
+            <ul>
+                <li><strong>Top Performing Sub-Categories:</strong> Bar graph highlighting the highest performing sub-categories by profit.</li>
+                <li><strong>Profit vs. Loss Ratio:</strong> Pie chart showing the proportion of items selling for a profit versus a loss.</li>
+                <li><strong>Loss-Making Items by Sub-Category:</strong> Chart detailing the number of loss-making items in each sub-category and their percentage of the total.</li>
+                <li><strong>Sales by Month (4 Years):</strong> Line graph illustrating sales trends by month over the last four years, revealing seasonal patterns.</li>
+            </ul>
+        </div>
         <div class='tableauPlaceholder' id='viz1751392808776' style='position: relative'><noscript><a href='#'><img alt='Dashboard 4 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards-Suggestions&#47;Dashboard4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
         <script type='text/javascript'>var divElement = document.getElementById('viz1751392808776'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='1227px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
         <div class="nav-links">
