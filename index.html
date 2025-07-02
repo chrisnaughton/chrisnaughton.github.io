@@ -38,9 +38,21 @@
             color: #555;
             font-size: 1.1em;
         }
+        .profile-section {
+            margin-bottom: 40px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #3498db;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
         .project-description {
             margin-bottom: 40px;
-            text-align: left;
+            text-align: center;
             font-size: 1.15em;
             line-height: 1.8;
             max-width: 800px;
@@ -62,7 +74,7 @@
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Pushes button to bottom */
+            justify-content: space-between;
         }
         .project-card:hover {
             transform: translateY(-5px);
@@ -79,7 +91,7 @@
             color: #777;
             margin-bottom: 15px;
             text-align: left;
-            flex-grow: 1; /* Allows description to take available space */
+            flex-grow: 1;
         }
         .project-card .button {
             display: inline-block;
@@ -90,10 +102,20 @@
             text-decoration: none;
             font-weight: bold;
             transition: background-color 0.3s ease;
-            margin-top: 15px; /* Space above button */
+            margin-top: 15px;
         }
         .project-card .button:hover {
             background-color: #2980b9;
+        }
+        .project-icon {
+            width: 80px; /* Increased size for better visibility */
+            height: 80px; /* Increased size for better visibility */
+            object-fit: contain; /* Ensures image fits without cropping */
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px; /* Slightly rounded corners for icons */
         }
         .footer {
             margin-top: 50px;
@@ -105,43 +127,58 @@
 </head>
 <body>
     <div class="container">
-        <h1>Chris Naughton's Data Science Portfolio</h1>
-<p class="project-description" style="text-align: center;">
-    Hello, and welcome to my Data Science and Analytics portfolio! <br>
-    My name, as you might have guessed by the title, is Chris Naughton. <br>
-    I am a theater artist, baker, game designer, and (most relevantly at this moment) a data analyst. <br>
-    
-    Wondering why people, pastries, and numbers behave the way they do is what drives me in every field I explore, and that curiosity is on display in the projects displayed below.
-    <br><br>
-    This collection of projects was chosen to display my skills in data cleaning, analysis, visualization, and machine learning. Each project includes key insights, methodologies, and actionable recommendations.
-</p>
+        <div class="profile-section">
+            <img src="images/SCAD2023-1236.jpg" alt="Chris Naughton Profile Picture" class="profile-pic">
+            <h1>Chris Naughton's Data Science Portfolio</h1>
+        </div>
+
+        <p class="project-description">
+            Hello, and welcome to my Data Science and Analytics portfolio! <br>
+            My name, as you might have guessed by the title, is Chris Naughton. <br>
+            I am a theater artist, baker, game designer, and (most relevantly at this moment) a data analyst. <br>
+            The three areas are unrelated but have one very slim but very important shared requirement: Curiosity. <br>
+            Wondering why people, pastries, and numbers behave the way they do is what drives me in every field I explore, and that curiosity is on display in the projects displayed below.
+            <br><br>
+            This collection of projects was chosen to display my skills in data cleaning, analysis, visualization, and machine learning. Each project includes key insights, methodologies, and actionable recommendations.
+        </p>
 
         <h2>My Projects:</h2>
         <div class="project-grid">
             <!-- Project 1: Superstore Profitability Analysis -->
             <div class="project-card">
+                <img src="images/Super Store.jpg" alt="Superstore Icon" class="project-icon">
                 <h3>Superstore Profitability Analysis</h3>
                 <p>An in-depth analysis of the Superstore dataset to diagnose profit erosion, identify strategic opportunities, and provide actionable recommendations for enhancing overall business profitability.</p>
                 <a href="superstore.html" class="button">View Project</a>
             </div>
 
-            <!-- Project 2: Customer Churn Prediction & Driver Analysis -->
+            <!-- Project 2: Telecom Customer Churn Prediction & Driver Analysis -->
             <div class="project-card">
-                <h3>Customer Churn Prediction & Driver Analysis</h3>
+                <img src="images/Chrun.jpg" alt="Churn Icon" class="project-icon">
+                <h3>Telecom Customer Churn Prediction & Driver Analysis</h3>
                 <p>Development of a Logistic Regression model to accurately forecast customer churn in a telecom context and identify key factors driving retention and attrition.</p>
                 <a href="churn.html" class="button">View Project</a>
             </div>
 
             <!-- Project 3: A/B/C Testing Analysis -->
             <div class="project-card">
+                <img src="images/Generic_Fastfood-1.jpg" alt="A/B Testing Icon" class="project-icon">
                 <h3>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</h3>
                 <p>Statistical analysis of three distinct fast-food promotional strategies to determine their effectiveness in driving sales and provide data-driven recommendations.</p>
                 <a href="ab_testing.html" class="button">View Project</a>
             </div>
+
+            <!-- New Card: My Resume -->
+            <div class="project-card">
+                <img src="images/resume-icon.png" alt="Resume Icon" class="project-icon"> <!-- Placeholder for a generic resume icon -->
+                <h3>My Resume</h3>
+                <p>A detailed overview of my professional experience, skills, and qualifications in data science and analytics.</p>
+                <a href="resume.html" class="button">View Resume</a>
+            </div>
         </div>
 
         <div class="footer">
-            <p>Built by Chris Naughton</p>
+            <p>Built with passion by Chris Naughton</p>
             <p>Last Updated: July 1, 2025</p>
         </div>
     </div>
