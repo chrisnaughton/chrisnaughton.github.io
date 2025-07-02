@@ -109,7 +109,9 @@
 
         <div class="project-links">
             <a href="./Fast_Food_A-B_Testing/" target="_blank">View Project Code on GitHub</a>
-            </div>
+            <!-- If you have a live notebook viewer (e.g., nbviewer.jupyter.org), link it here -->
+            <!-- <a href="https://nbviewer.jupyter.org/github/chrisnaughton/Fast_Food_A-B_Testing/blob/main/notebooks/Fast_Food_A-B_Testing.ipynb" target="_blank">View Notebook</a> -->
+        </div>
 
         <h2>Project Objectives</h2>
         <ul>
@@ -144,51 +146,46 @@
         <p>The statistical analysis revealed clear differences in promotional effectiveness:</p>
         <ul>
             <li><strong>Overall Significance:</strong> The ANOVA test showed a <strong>statistically significant difference</strong> in total sales among the three promotions (p-value &lt; 0.05), indicating that the promotion choice does impact sales.</li>
-            <li><strong>Promotion 2 Underperforms:</strong>
-                <ul>
-                    <li>Promotion 1 generated approximately **$43,078 more** in total sales per location than Promotion 2, a **statistically significant** difference (p &lt; 0.05).</li>
-                    <li>Promotion 3 generated approximately **$32,140 more** in total sales per location than Promotion 2, also a **statistically significant** difference (p &lt; 0.05).</li>
-                </ul>
-            </li>
-            <li><strong>Promotion 1 and Promotion 3 are Similar:</strong> There was **no statistically significant difference** in total sales between Promotion 1 and Promotion 3 (p &gt; 0.05). Both performed similarly well.</li>
+            <li><strong>Promotion 2 Underperforms:</strong> Promotion 1 generated approximately <strong>$43,078 more</strong> in total sales per location than Promotion 2, a <strong>statistically significant</strong> difference (p &lt; 0.05). Similarly, Promotion 3 generated approximately <strong>$32,140 more</strong> than Promotion 2 (p &lt; 0.05).</li>
+            <li><strong>Promotion 1 and Promotion 3 are Similar:</strong> There was <strong>no statistically significant difference</strong> in total sales between Promotion 1 and Promotion 3 (p &gt; 0.05). Both performed similarly well.</li>
         </ul>
 
         <h2>Recommendations</h2>
         <p>Based on these findings, we recommend:</p>
         <ul>
-            <li>**Discontinue Promotion 2:** This promotion consistently leads to significantly lower sales and should be **avoided** in future campaigns.</li>
-            <li>**Focus on Promotions 1 and 3:** Both Promotion 1 and Promotion 3 are effective in driving sales. The choice between these two should be guided by other business considerations, such as implementation cost, operational complexity, or long-term strategic goals, as their sales performance is statistically comparable.</li>
+            <li><strong>Discontinue Promotion 2:</strong> This promotion consistently leads to significantly lower sales and should be <strong>avoided</strong> in future campaigns.</li>
+            <li><strong>Focus on Promotions 1 and 3:</strong> Both are effective in driving sales and are statistically comparable. The choice between them should be based on other business considerations like cost or operational complexity.</li>
         </ul>
 
         <h2>Limitations</h2>
         <ul>
-            <li>**No Cost Data:** This analysis focused solely on sales volume and did not account for the **cost of implementing each promotion**. A promotion with slightly lower sales but significantly lower costs might still be more profitable.</li>
-            <li>**Short Duration:** The sales data covers only four weeks, limiting insights into **long-term effects**, customer loyalty, or sustained promotional impact.</li>
-            <li>**External Factors:** Unmeasured external variables (e.g., local events, competitor activities, seasonality) may have influenced sales and were not controlled for.</li>
-            <li>**Covariate Balance:** A slight imbalance in `MarketSize` distribution across promotion groups was observed, which could potentially confound results in more complex analyses.</li>
-            <li>**Generalizability:** Findings are based on the provided sample and might not perfectly apply to all store locations or future campaigns without further validation.</li>
+            <li><strong>No Cost Data:</strong> Lacks cost data for full ROI analysis of each promotion.</li>
+            <li><strong>Short Duration:</strong> The 4-week sales data limits insights into long-term effects or sustained impact.</li>
+            <li><strong>External Factors:</strong> Unmeasured external variables (e.g., local events, competitor activities) were not controlled.</li>
+            <li><strong>Covariate Balance:</strong> A slight imbalance in `MarketSize` distribution across groups could potentially confound results.</li>
+            <li><strong>Generalizability:</strong> Findings may not perfectly apply to all store locations or future campaigns without further validation.</li>
         </ul>
 
         <h2>Future Work</h2>
         <p>To enhance this analysis and provide more robust recommendations, consider:</p>
         <ul>
-            <li>**Cost-Benefit Analysis:** Integrate promotional cost data to determine the **Return on Investment (ROI)** for each strategy.</li>
-            <li>**Longer-Term Tracking:** Conduct A/B tests over extended periods (e.g., 8-12 weeks) to assess sustained impact and customer behavior.</li>
-            <li>**Advanced Statistical Modeling:** Utilize techniques like ANCOVA or mixed-effects models to explicitly control for confounding variables.</li>
-            <li>**Qualitative Feedback:** Collect insights from store managers and customers regarding operational challenges and promotion appeal.</li>
-            <li>**Targeted A/B Test (P1 vs. P3):** If needed, design a dedicated, larger-scale A/B test specifically comparing Promotion 1 and Promotion 3 to potentially uncover smaller, subtle differences.</li>
+            <li><strong>Cost-Benefit Analysis:</strong> Integrate promotional cost data to determine the <strong>Return on Investment (ROI)</strong> for each strategy.</li>
+            <li><strong>Longer-Term Tracking:</strong> Conduct A/B tests over extended periods (e.g., 8-12 weeks) to assess sustained impact and customer behavior.</li>
+            <li><strong>Advanced Statistical Modeling:</strong> Utilize techniques like ANCOVA or mixed-effects models to explicitly control for confounding variables.</li>
+            <li><strong>Qualitative Feedback:</strong> Collect insights from store managers and customers regarding operational challenges and promotion appeal.</li>
+            <li><strong>Targeted A/B Test (P1 vs. P3):</strong> Design a dedicated, larger-scale A/B test specifically comparing Promotion 1 and Promotion 3 to uncover subtle differences if needed.</li>
         </ul>
 
         <h2>Technologies Used</h2>
         <ul>
-            <li>**Python**</li>
-            <li>**Pandas** (for data manipulation)</li>
-            <li>**NumPy** (for numerical operations)</li>
-            <li>**SciPy** (for statistical tests)</li>
-            <li>**Statsmodels** (for ANOVA and Tukey HSD)</li>
-            <li>**Matplotlib** (for visualizations)</li>
-            <li>**Seaborn** (for enhanced visualizations)</li>
-            <li>**Jupyter Notebook** (for reproducible analysis)</li>
+            <li><strong>Python</strong></li>
+            <li><strong>Pandas</strong> (for data manipulation)</li>
+            <li><strong>NumPy</strong> (for numerical operations)</li>
+            <li><strong>SciPy</strong> (for statistical tests)</li>
+            <li><strong>Statsmodels</strong> (for ANOVA and Tukey HSD)</li>
+            <li><strong>Matplotlib</strong> (for visualizations)</li>
+            <li><strong>Seaborn</strong> (for enhanced visualizations)</li>
+            <li><strong>Jupyter Notebook</strong> (for reproducible analysis)</li>
         </ul>
 
         <h2>How to Run the Analysis</h2>
