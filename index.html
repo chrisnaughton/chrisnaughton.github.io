@@ -102,7 +102,7 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
         .project-card h3 {
-            color: white; /* White text for title over icon */
+            color: #3498db; /* Blue text for title (no background) */
             margin: 0; /* Remove default margins */
             font-size: 1.0em; /* Adjusted for single line readability */
             text-align: center;
@@ -113,7 +113,6 @@
             align-items: center; /* Center text vertically */
             justify-content: center; /* Center text horizontally */
             min-height: 40px; /* Ensure enough space for title */
-            background-color: rgba(52, 152, 219, 0.8); /* Semi-transparent blue background */
             z-index: 10; /* Above icon */
             position: absolute; /* Position over the icon */
             top: 0;
@@ -138,12 +137,9 @@
             transition: background-color 0.3s ease;
             text-align: center;
             width: 100%; /* Button takes full width of card */
-            position: absolute; /* Position relative to card */
-            bottom: 0; /* Flush with bottom */
-            left: 0;
-            right: 0;
-            z-index: 10; /* Ensure button is on top */
+            margin-top: auto; /* Pushes button to the bottom in a flex column */
             box-sizing: border-box; /* Include padding in width calculation */
+            z-index: 10; /* Ensure button is on top of icon */
         }
         .project-card .button:hover {
             background-color: #2980b9;
@@ -200,30 +196,25 @@
             </p>
         </div>
 
-        <div class="sub-banner-section"> <!-- Moved outside content-area for full width -->
-            <img src="images/SubBanner.jpg" alt="My Projects Sub-Banner" class="sub-banner-image">
+        <div class="sub-banner-section"> <img src="images/SubBanner.jpg" alt="My Projects Sub-Banner" class="sub-banner-image">
         </div>
 
-        <div class="content-area"> <!-- Re-using content-area for consistent padding for projects and resume -->
-            <h2>My Projects:</h2>
+        <div class="content-area"> <h2>My Projects:</h2>
             <div class="project-grid">
-                <!-- Project 1: Superstore Profitability Analysis -->
                 <div class="project-card">
                     <h3>Superstore Profitability Analysis</h3>
                     <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
                     <a href="superstore.html" class="button">View Project</a>
                 </div>
 
-                <!-- Project 2: Telecom Customer Churn Prediction & Driver Analysis -->
                 <div class="project-card">
-                    <h3>Telecom Customer Churn Prediction & Driver Analysis</h3>
+                    <h3>Churn Analysis - Telecom</h3>
                     <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
                     <a href="churn.html" class="button">View Project</a>
                 </div>
 
-                <!-- Project 3: A/B/C Testing Analysis -->
                 <div class="project-card">
-                    <h3>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</h3>
+                    <h3>A/B/C Testing - Fast Food Promotion</h3>
                     <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
                     <a href="ab_testing.html" class="button">View Project</a>
                 </div>
@@ -236,10 +227,7 @@
                     <a href="resume.html" class="button">View Resume</a>
                 </div>
             </div>
-        </div> <!-- End of content-area for projects/resume -->
-
-        <div class="footer"> <!-- Moved outside content-area for full width -->
-            <p>Built with passion by Chris Naughton</p>
+        </div> <div class="footer"> <p>Built with passion by Chris Naughton</p>
             <p>Last Updated: July 1, 2025</p>
         </div>
     </div>
