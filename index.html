@@ -9,33 +9,33 @@
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #333333; /* Dark grey background */
-            color: #f8f8f8; /* Lighter text for dark background */
+            background-color: #333333; /* Furthest background: Dark grey */
+            color: #333; /* Default text color for elements outside container */
             line-height: 1.6;
         }
         .container {
             max-width: 960px;
             margin: 20px auto;
-            background-color: #444444; /* Slightly lighter grey for container */
+            background-color: #ffffff; /* Upper background: White */
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
         h1 {
-            color: #e0e0e0; /* Lighter color for main title */
+            color: #2c3e50; /* Darker color for main title on white background */
             margin-bottom: 15px;
             font-size: 2.8em;
         }
         h2 {
-            color: #cccccc; /* Lighter color for section titles */
+            color: #34495e; /* Darker color for section titles on white background */
             margin-top: 30px;
             margin-bottom: 20px;
             font-size: 1.8em;
         }
         p {
             margin-bottom: 20px;
-            color: #bbbbbb; /* Lighter color for general text */
+            color: #555; /* Darker color for general text on white background */
             font-size: 1.1em;
         }
         .profile-section {
@@ -67,71 +67,66 @@
             margin-top: 30px;
         }
         .project-card {
-            background-color: #555555; /* Darker background for cards */
-            padding: 0; /* Removed padding to allow image/button to fill */
+            background-color: #ecf0f1; /* Light background for cards */
+            padding: 25px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
-            text-align: center; /* Center content within card */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            text-align: left;
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            position: relative; /* For absolute positioning of button */
-            overflow: hidden; /* Ensures content respects border-radius */
         }
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* More prominent hover shadow */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
         .project-card h3 {
-            color: #87ceeb; /* Lighter blue for card titles */
-            margin-top: 10px; /* Space below image */
-            margin-bottom: 5px; /* Space above button */
-            font-size: 0.75em; /* Half the size of 1.5em */
+            color: #3498db; /* Blue for card titles */
+            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 10px;
             text-align: center; /* Centered project titles */
-            padding: 0 10px; /* Small horizontal padding for text */
-            flex-grow: 1; /* Allows title to take available space */
-            display: flex; /* Use flex to center text vertically if needed */
-            align-items: center; /* Center text vertically */
-            justify-content: center; /* Center text horizontally */
-            min-height: 40px; /* Ensure enough space for title */
         }
-        .project-card p { /* This rule is now effectively unused for project descriptions */
-            display: none; /* Hide the description paragraph */
+        .project-card p {
+            font-size: 0.95em;
+            color: #777; /* Darker color for card description */
+            margin-bottom: 15px;
+            text-align: left;
+            flex-grow: 1;
         }
         .project-card .button {
-            display: block; /* Make button take full width */
+            display: inline-block;
             background-color: #3498db;
             color: white;
-            padding: 10px 0; /* Vertical padding, horizontal handled by width */
-            border-radius: 0 0 8px 8px; /* Sharp top, rounded bottom to match card */
+            padding: 10px 18px;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
             transition: background-color 0.3s ease;
+            margin-top: 15px;
             text-align: center; /* Centered button text */
-            width: 100%; /* Button takes full width of card */
-            position: relative; /* To ensure it's on top of the image part it overlaps */
-            z-index: 2; /* Ensure button is above the image */
-            margin-top: -20px; /* Negative margin to pull it up and overlap the image */
-            box-sizing: border-box; /* Include padding in width calculation */
+            width: fit-content; /* Ensure button width fits content */
+            margin-left: auto; /* Center button horizontally */
+            margin-right: auto; /* Center button horizontally */
         }
         .project-card .button:hover {
             background-color: #2980b9;
         }
         .project-icon {
-            width: 100%; /* Icon fills the width of the card */
-            height: 180px; /* Fixed height for consistency */
-            object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
             display: block;
-            margin: 0; /* Remove default margins */
-            border-radius: 8px 8px 0 0; /* Rounded top corners, sharp bottom */
-            position: relative; /* To control z-index if needed */
-            z-index: 1; /* Ensure icon is below the overlapping part of the button */
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px;
         }
         .footer {
             margin-top: 50px;
             font-size: 0.9em;
-            color: #888888; /* Slightly lighter for footer */
+            color: #888; /* Darker color for footer on white background */
         }
         /* Style for centered resume card */
         .resume-card-wrapper {
@@ -168,6 +163,7 @@
             <div class="project-card">
                 <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
                 <h3>Superstore Profitability Analysis</h3>
+                <p>An in-depth analysis of the Superstore dataset to diagnose profit erosion, identify strategic opportunities, and provide actionable recommendations for enhancing overall business profitability.</p>
                 <a href="superstore.html" class="button">View Project</a>
             </div>
 
@@ -175,6 +171,7 @@
             <div class="project-card">
                 <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
                 <h3>Telecom Customer Churn Prediction & Driver Analysis</h3>
+                <p>Development of a Logistic Regression model to accurately forecast customer churn in a telecom context and identify key factors driving retention and attrition.</p>
                 <a href="churn.html" class="button">View Project</a>
             </div>
 
@@ -182,6 +179,7 @@
             <div class="project-card">
                 <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
                 <h3>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</h3>
+                <p>Statistical analysis of three distinct fast-food promotional strategies to determine their effectiveness in driving sales and provide data-driven recommendations.</p>
                 <a href="ab_testing.html" class="button">View Project</a>
             </div>
         </div>
@@ -192,12 +190,13 @@
             <div class="project-card">
                 <img src="images/Resume.jpg" alt="Resume Icon" class="project-icon">
                 <h3>My Resume</h3>
+                <p>A detailed overview of my professional experience, skills, and qualifications in data science and analytics.</p>
                 <a href="resume.html" class="button">View Resume</a>
             </div>
         </div>
 
         <div class="footer">
-            <p>Built with passion by Chris Naughton</p>
+            <p>Built by Chris Naughton</p>
             <p>Last Updated: July 1, 2025</p>
         </div>
     </div>
