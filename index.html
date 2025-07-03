@@ -97,7 +97,7 @@
             flex-direction: column;
             overflow: hidden; /* Ensures content respects border-radius */
             position: relative; /* For z-index and button positioning */
-            height: 302px; /* Fixed height for consistent card size (256px icon + ~46px button) */
+            height: 325px; /* Fixed height for consistent card size (295px icon + 30px button padding) */
             justify-content: space-between; /* Pushes icon to top, button to bottom */
         }
         .project-card:hover {
@@ -109,19 +109,21 @@
             display: none; /* Hide the description paragraph */
         }
         .project-card .button {
-            display: block; /* Make button take full width */
+            display: flex; /* Use flexbox for vertical centering */
+            align-items: center; /* Center text vertically */
+            justify-content: center; /* Center text horizontally */
             background-color: #3498db;
             color: white; /* Text color is white */
-            padding: 15px 0; /* Vertical padding */
+            padding: 0; /* Remove padding here, use min-height for vertical space */
+            min-height: 30px; /* Minimum height for the button to accommodate text */
             border-radius: 0 0 8px 8px; /* Rounded bottom corners to match card */
             text-decoration: none;
             font-weight: bold;
             transition: background-color 0.3s ease;
-            text-align: center;
             width: 100%; /* Button takes full width of card */
             box-sizing: border-box; /* Include padding in width calculation */
             z-index: 10; /* Ensure button is on top of icon */
-            font-size: 1.0em; /* Set font size for the button text */
+            font-size: 1.1em; /* Increased font size by 10% */
             white-space: nowrap; /* Ensure text stays on one line */
             overflow: hidden; /* Hide overflow */
             text-overflow: ellipsis; /* Add ellipsis if text overflows */
@@ -131,7 +133,7 @@
         }
         .project-icon {
             width: 100%; /* Icon fills the width of the card */
-            height: 256px; /* Fixed height for consistency */
+            height: 295px; /* Increased height by 15% (256 * 1.15 = 294.4, rounded to 295) */
             object-fit: cover; /* Ensures image covers the area, cropping if necessary */
             display: block;
             border-radius: 8px 8px 0 0; /* Rounded top corners, sharp bottom */
@@ -187,22 +189,22 @@
 
         <div class="content-area">
             <div class="project-grid">
-                <!-- Project 1: Superstore Profitability Analysis -->
+                <!-- Project 1: Superstore Profit Analysis -->
                 <div class="project-card">
                     <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
-                    <a href="superstore.html" class="button">Superstore Profitability Analysis</a>
+                    <a href="superstore.html" class="button">Superstore Profit Analysis</a>
                 </div>
 
-                <!-- Project 2: Telecom Customer Churn Prediction & Driver Analysis -->
+                <!-- Project 2: Telecom Churn Analysis -->
                 <div class="project-card">
                     <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
-                    <a href="churn.html" class="button">Churn Analysis - Telecom</a>
+                    <a href="churn.html" class="button">Telecom Churn Analysis</a>
                 </div>
 
-                <!-- Project 3: A/B/C Testing Analysis -->
+                <!-- Project 3: Fast Food A/B/C Testing -->
                 <div class="project-card">
                     <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
-                    <a href="ab_testing.html" class="button">A/B/C Testing - Fast Food Promotion</a>
+                    <a href="ab_testing.html" class="button">Fast Food A/B/C Testing</a>
                 </div>
             </div>
 
