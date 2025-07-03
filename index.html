@@ -25,7 +25,7 @@
         }
         .banner-section {
             width: 100%;
-            height: 200px; /* Adjust banner height as desired */
+            height: 250px; /* Increased height to show more of the banner */
             overflow: hidden; /* Ensures image respects border-radius */
             border-radius: 10px 10px 0 0; /* Rounded top corners to match container */
             margin-bottom: 20px; /* Space below banner */
@@ -35,14 +35,10 @@
             width: 100%;
             height: 100%;
             object-fit: cover; /* Ensures the image covers the area, cropping if aspect ratio differs */
+            object-position: center center; /* Center the image within the frame */
             display: block;
         }
-        h1 {
-            color: #2c3e50; /* Darker color for main title on white background */
-            margin-bottom: 15px;
-            font-size: 2.8em;
-            padding: 0 30px; /* Restore horizontal padding for title */
-        }
+        /* Removed h1 styling as the h1 tag is being deleted */
         h2 {
             color: #34495e; /* Darker color for section titles on white background */
             margin-top: 30px;
@@ -154,7 +150,7 @@
             <img src="images/Banner.jpg" alt="Portfolio Banner" class="banner-image">
         </div>
 
-        <h1>Chris Naughton's Data Science Portfolio</h1>
+        <!-- Removed the h1 title as requested -->
 
         <p class="project-description">
             Hello, and welcome to my <strong>Data Science and Analytics portfolio</strong>! <br><br>
