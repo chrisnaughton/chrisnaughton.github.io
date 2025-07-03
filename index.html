@@ -25,10 +25,9 @@
         }
         .banner-section {
             width: 100%;
-            height: 250px; /* Increased height to show more of the banner */
+            height: 300px; /* Increased height to show more of the banner */
             overflow: hidden; /* Ensures image respects border-radius */
             border-radius: 10px 10px 0 0; /* Rounded top corners to match container */
-            margin-bottom: 20px; /* Space below banner */
             position: relative; /* For text overlay if needed */
         }
         .banner-image {
@@ -38,19 +37,26 @@
             object-position: center center; /* Center the image within the frame */
             display: block;
         }
-        /* Removed h1 styling as the h1 tag is being deleted */
+        .content-area { /* New div for content below the main banner */
+            padding: 30px; /* Re-introduces padding for content */
+        }
+        h1 { /* This style is now unused as h1 is removed */
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 2.8em;
+        }
         h2 {
             color: #34495e; /* Darker color for section titles on white background */
             margin-top: 30px;
             margin-bottom: 20px;
             font-size: 1.8em;
-            padding: 0 30px; /* Restore horizontal padding for titles */
+            /* Padding handled by .content-area */
         }
         p {
             margin-bottom: 20px;
             color: #555; /* Darker color for general text on white background */
             font-size: 1.1em;
-            padding: 0 30px; /* Restore horizontal padding for paragraphs */
+            /* Padding handled by .content-area */
         }
         .project-description {
             margin-bottom: 40px;
@@ -61,12 +67,26 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .sub-banner-section { /* New style for the sub-banner */
+            width: 100%;
+            height: 80px; /* Adjust height as needed */
+            overflow: hidden;
+            margin-top: 30px; /* Space above sub-banner */
+            margin-bottom: 20px; /* Space below sub-banner */
+            border-radius: 8px; /* Slightly rounded corners for sub-banner */
+        }
+        .sub-banner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-top: 30px;
-            padding: 0 30px; /* Apply padding to the grid container */
+            /* Padding handled by .content-area */
         }
         .project-card {
             background-color: #ecf0f1; /* Light background for cards */
@@ -129,7 +149,7 @@
             margin-top: 50px;
             font-size: 0.9em;
             color: #888; /* Darker color for footer on white background */
-            padding: 0 30px 30px 30px; /* Add bottom padding to footer for container */
+            /* Padding handled by .content-area */
         }
         /* Style for centered resume card */
         .resume-card-wrapper {
@@ -150,54 +170,58 @@
             <img src="images/Banner.jpg" alt="Portfolio Banner" class="banner-image">
         </div>
 
-        <!-- Removed the h1 title as requested -->
+        <div class="content-area">
+            <p class="project-description">
+                Hello, and welcome to my <strong>Data Science and Analytics portfolio</strong>! <br><br>
+                My name, as you might have guessed by the title, is <strong>Chris Naughton</strong>. <br><br>
+                I am a baker, game designer, and (most relevantly at this moment) a <strong>data analyst</strong>. <br>
+                This collection of projects was chosen to display my skills in <strong>data cleaning, analysis, visualization, and machine learning</strong>. Each project includes key insights, methodologies, and actionable recommendations.
+            </p>
 
-        <p class="project-description">
-            Hello, and welcome to my <strong>Data Science and Analytics portfolio</strong>! <br><br>
-            My name, as you might have guessed by the title, is <strong>Chris Naughton</strong>. <br><br>
-            I am a baker, game designer, and (most relevantly at this moment) a <strong>data analyst</strong>. <br>
-            This collection of projects was chosen to display my skills in <strong>data cleaning, analysis, visualization, and machine learning</strong>. Each project includes key insights, methodologies, and actionable recommendations.
-        </p>
-
-        <h2>My Projects:</h2>
-        <div class="project-grid">
-            <!-- Project 1: Superstore Profitability Analysis -->
-            <div class="project-card">
-                <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
-                <h3>Superstore Profitability Analysis</h3>
-                <p>Analyzed Superstore data to diagnose profit erosion and identify strategic opportunities. Provided actionable recommendations.</p>
-                <a href="superstore.html" class="button">View Project</a>
+            <div class="sub-banner-section">
+                <img src="images/SubBanner.jpg" alt="My Projects Sub-Banner" class="sub-banner-image">
             </div>
 
-            <!-- Project 2: Telecom Customer Churn Prediction & Driver Analysis -->
-            <div class="project-card">
-                <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
-                <h3>Telecom Customer Churn Prediction & Driver Analysis</h3>
-                <p>Developed Logistic Regression model for churn prediction, identifying key factors driving customer retention/attrition.</p>
-                <a href="churn.html" class="button">View Project</a>
+            <h2>My Projects:</h2> <!-- Re-added this H2 as the user's last instruction was to replace "My Projects" with an image, not remove the heading entirely. If the user wants this removed, they need to explicitly state to remove the H2. -->
+            <div class="project-grid">
+                <!-- Project 1: Superstore Profitability Analysis -->
+                <div class="project-card">
+                    <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
+                    <h3>Superstore Profitability Analysis</h3>
+                    <p>Analyzed Superstore data to diagnose profit erosion and identify strategic opportunities. Provided actionable recommendations.</p>
+                    <a href="superstore.html" class="button">View Project</a>
+                </div>
+
+                <!-- Project 2: Telecom Customer Churn Prediction & Driver Analysis -->
+                <div class="project-card">
+                    <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
+                    <h3>Telecom Customer Churn Prediction & Driver Analysis</h3>
+                    <p>Developed Logistic Regression model for churn prediction, identifying key factors driving customer retention/attrition.</p>
+                    <a href="churn.html" class="button">View Project</a>
+                </div>
+
+                <!-- Project 3: A/B/C Testing Analysis -->
+                <div class="project-card">
+                    <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
+                    <h3>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</h3>
+                    <p>Statistical analysis of three fast-food promotions to determine effectiveness and provide data-driven recommendations.</p>
+                    <a href="ab_testing.html" class="button">View Project</a>
+                </div>
             </div>
 
-            <!-- Project 3: A/B/C Testing Analysis -->
-            <div class="project-card">
-                <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
-                <h3>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</h3>
-                <p>Statistical analysis of three fast-food promotions to determine effectiveness and provide data-driven recommendations.</p>
-                <a href="ab_testing.html" class="button">View Project</a>
+            <div class="resume-card-wrapper">
+                <div class="project-card">
+                    <img src="images/Resume.jpg" alt="Resume Icon" class="project-icon">
+                    <h3>My Resume</h3>
+                    <p>A concise overview of my professional experience, skills, and qualifications in data science.</p>
+                    <a href="resume.html" class="button">View Resume</a>
+                </div>
             </div>
-        </div>
 
-        <div class="resume-card-wrapper">
-            <div class="project-card">
-                <img src="images/Resume.jpg" alt="Resume Icon" class="project-icon">
-                <h3>My Resume</h3>
-                <p>A concise overview of my professional experience, skills, and qualifications in data science.</p>
-                <a href="resume.html" class="button">View Resume</a>
+            <div class="footer">
+                <p>Built by Chris Naughton</p>
+                <p>Last Updated: July 1, 2025</p>
             </div>
-        </div>
-
-        <div class="footer">
-            <p>Built by Chris Naughton</p>
-            <p>Last Updated: July 1, 2025</p>
         </div>
     </div>
 </body>
