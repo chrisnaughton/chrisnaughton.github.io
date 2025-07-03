@@ -3,29 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Naughton's Resume</title>
+    <title>My Resume</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f8f8f8;
-            color: #333;
+            background-color: #333333; /* Furthest background: Dark grey */
+            color: #f8f8f8; /* Lighter text for elements directly on dark background */
             line-height: 1.6;
             text-align: center;
         }
         .container {
             max-width: 960px;
             margin: 20px auto;
-            background-color: #ffffff;
-            padding: 30px;
+            background-color: #ffffff; /* Upper background: White */
+            padding: 0; /* Removed padding to allow banner/footer to fill edges */
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden; /* Ensures banner/footer's border-radius is respected */
         }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 25px;
+        .banner-section {
+            width: 100%;
+            height: 150px; /* Consistent height for sub-page banners */
+            overflow: hidden;
+            border-radius: 10px 10px 0 0; /* Rounded top corners to match container */
+            position: relative;
+            margin-top: 5px; /* Consistent margin-top */
+            background-color: #f0f0f0; /* Placeholder background for banner */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner-title {
+            color: #2c3e50; /* Darker color for main title on white background */
             font-size: 2.2em;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .content-area { /* Wrapper for main content with consistent padding */
+            padding: 30px;
+        }
+        h1 { /* Hidden as it's replaced by banner-title */
+            display: none;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #555; /* Darker color for general text on white background */
+            font-size: 1.1em;
+            text-align: left; /* Align text left within content area */
         }
         .resume-embed {
             width: 100%;
@@ -36,17 +63,17 @@
         }
         .download-button {
             display: inline-block;
-            background-color: #28a745; /* Green download button */
+            background-color: #3498db; /* Blue to match other buttons */
             color: white;
-            padding: 12px 25px;
+            padding: 10px 20px; /* Consistent padding */
             border-radius: 5px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: bold; /* Consistent font-weight */
             transition: background-color 0.3s ease;
             margin-bottom: 25px;
         }
         .download-button:hover {
-            background-color: #218838;
+            background-color: #2980b9; /* Darker blue on hover */
         }
         .nav-links {
             text-align: center;
@@ -67,23 +94,47 @@
         .nav-links a:hover {
             background-color: #2980b9;
         }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            background-color: #004d00; /* Dark green footer */
+            color: #ffffff; /* White text for dark green background */
+            padding: 20px 30px; /* Add padding to the footer */
+            border-radius: 0 0 10px 10px; /* Rounded bottom corners to match container */
+            text-align: center; /* Center footer text */
+            width: 100%; /* Make footer span full width */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .footer p { /* Adjust paragraph color within footer */
+            color: #ffffff;
+            margin: 0; /* Remove default paragraph margins within footer */
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>My Resume</h1>
-        <p>Feel free to peruse or download my resume.<br>
-        If you have any questions feel free to contact me at cnaught22@gmail.com</p>
+        <div class="banner-section">
+            <h1 class="banner-title">My Resume</h1>
+        </div>
 
-        <!-- Embed your resume PDF here -->
-        <iframe src="documents/Chris Naughton Analyst Resume.pdf" class="resume-embed"></iframe>
+        <div class="content-area">
+            <p>Feel free to peruse or download my resume.<br>
+            If you have any questions feel free to contact me at cnaught22@gmail.com</p>
 
-        <!-- Download button for resume -->
-        <a href="documents/Chris Naughton Analyst Resume.pdf" download="Chris_Naughton_Resume.pdf" class="download-button">Download Resume (PDF)</a>
+            <!-- Embed your resume PDF here -->
+            <iframe src="documents/Chris Naughton Analyst Resume.pdf" class="resume-embed"></iframe>
 
-        <div class="nav-links">
-            <a href="index.html">Back to Portfolio Home</a>
+            <!-- Download button for resume -->
+            <a href="documents/Chris Naughton Analyst Resume.pdf" download="Chris_Naughton_Resume.pdf" class="download-button">Download Resume (PDF)</a>
+
+            <div class="nav-links">
+                <a href="index.html">Back to Portfolio Home</a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Built with passion by Chris Naughton</p>
+            <p>Last Updated: July 1, 2025</p>
         </div>
     </div>
 </body>
