@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,8 +46,8 @@
             margin-bottom: 15px;
             font-size: 2.8em;
         }
-        h2 {
-            color: #34495e; /* Darker color for section titles on white background */
+        h2 { /* This style is now unused as h2 is removed */
+            color: #34495e;
             margin-top: 30px;
             margin-bottom: 20px;
             font-size: 1.8em;
@@ -67,7 +68,7 @@
         }
         .sub-banner-section { /* New style for the sub-banner */
             width: 100%;
-            height: 250px; /* Height for the sub-banner */
+            height: 150px; /* Sized down height for the sub-banner */
             overflow: hidden;
             margin-top: 30px; /* Space above sub-banner */
             margin-bottom: 20px; /* Space below sub-banner */
@@ -102,12 +103,11 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
         .project-card h3 {
-            color: #3498db; /* Blue text for title (no background) */
+            color: white; /* White text for title over icon */
             margin: 0; /* Remove default margins */
-            font-size: 1.0em; /* Adjusted for single line readability */
+            font-size: 0.8em; /* 20% smaller than 1.0em */
             text-align: center;
             line-height: 1.2;
-            padding: 10px 5px; /* Padding for title over image */
             flex-grow: 0; /* Don't grow, just fit content */
             display: flex;
             align-items: center; /* Center text vertically */
@@ -115,10 +115,9 @@
             min-height: 40px; /* Ensure enough space for title */
             z-index: 10; /* Above icon */
             position: absolute; /* Position over the icon */
-            top: 0;
+            top: 35px; /* 35 pixels from top of icon */
             left: 0;
             right: 0;
-            border-radius: 8px 8px 0 0; /* Rounded top corners to match card */
             white-space: nowrap; /* Keep text on one line */
             overflow: hidden; /* Hide overflow */
             text-overflow: ellipsis; /* Add ellipsis if text overflows */
@@ -196,23 +195,28 @@
             </p>
         </div>
 
-        <div class="sub-banner-section"> <img src="images/SubBanner.jpg" alt="My Projects Sub-Banner" class="sub-banner-image">
+        <div class="sub-banner-section">
+            <img src="images/SubBanner.jpg" alt="My Projects Sub-Banner" class="sub-banner-image">
         </div>
 
-        <div class="content-area"> <h2>My Projects:</h2>
+        <div class="content-area">
+            <!-- Removed the h2 "My Projects:" as requested -->
             <div class="project-grid">
+                <!-- Project 1: Superstore Profitability Analysis -->
                 <div class="project-card">
                     <h3>Superstore Profitability Analysis</h3>
                     <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
                     <a href="superstore.html" class="button">View Project</a>
                 </div>
 
+                <!-- Project 2: Telecom Customer Churn Prediction & Driver Analysis -->
                 <div class="project-card">
                     <h3>Churn Analysis - Telecom</h3>
                     <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
                     <a href="churn.html" class="button">View Project</a>
                 </div>
 
+                <!-- Project 3: A/B/C Testing Analysis -->
                 <div class="project-card">
                     <h3>A/B/C Testing - Fast Food Promotion</h3>
                     <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
@@ -227,9 +231,13 @@
                     <a href="resume.html" class="button">View Resume</a>
                 </div>
             </div>
-        </div> <div class="footer"> <p>Built with passion by Chris Naughton</p>
+        </div> <!-- End of content-area for projects/resume -->
+
+        <div class="footer">
+            <p>Built with passion by Chris Naughton</p>
             <p>Last Updated: July 1, 2025</p>
         </div>
     </div>
 </body>
 </html>
+```
