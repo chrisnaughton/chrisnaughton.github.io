@@ -69,7 +69,7 @@
         }
         .sub-banner-section { /* New style for the sub-banner */
             width: 100%;
-            height: 80px; /* Adjust height as needed */
+            height: 250px; /* Increased height to make sub-banner more visible */
             overflow: hidden;
             margin-top: 30px; /* Space above sub-banner */
             margin-bottom: 20px; /* Space below sub-banner */
@@ -78,7 +78,7 @@
         .sub-banner-image {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Ensures the image covers the area, cropping if aspect ratio differs */
             display: block;
         }
         .project-grid {
@@ -132,8 +132,8 @@
             background-color: #2980b9;
         }
         .project-icon {
-            width: 128px;
-            height: 128px;
+            width: 256px; /* Twice as large as 128px */
+            height: 256px; /* Twice as large as 128px */
             object-fit: contain;
             margin-bottom: 15px;
             display: block;
@@ -189,7 +189,6 @@
                 <div class="project-card">
                     <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
                     <h3>Superstore Profitability Analysis</h3>
-                    <!-- Removed description paragraph -->
                     <a href="superstore.html" class="button">View Project</a>
                 </div>
 
@@ -197,7 +196,6 @@
                 <div class="project-card">
                     <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
                     <h3>Telecom Customer Churn Prediction & Driver Analysis</h3>
-                    <!-- Removed description paragraph -->
                     <a href="churn.html" class="button">View Project</a>
                 </div>
 
@@ -205,7 +203,6 @@
                 <div class="project-card">
                     <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
                     <h3>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</h3>
-                    <!-- Removed description paragraph -->
                     <a href="ab_testing.html" class="button">View Project</a>
                 </div>
             </div>
@@ -214,7 +211,6 @@
                 <div class="project-card">
                     <img src="images/Resume.jpg" alt="Resume Icon" class="project-icon">
                     <h3>My Resume</h3>
-                    <!-- Removed description paragraph -->
                     <a href="resume.html" class="button">View Resume</a>
                 </div>
             </div>
