@@ -68,7 +68,7 @@
         }
         .sub-banner-section { /* New style for the sub-banner */
             width: 100%;
-            height: 150px; /* Height for the sub-banner (same aspect ratio as main banner) */
+            height: 150px; /* Height for the sub-banner (maintains proportion with main banner) */
             overflow: hidden;
             margin-top: 30px; /* Space above sub-banner */
             margin-bottom: 20px; /* Space below sub-banner */
@@ -97,12 +97,14 @@
             flex-direction: column;
             overflow: hidden; /* Ensures content respects border-radius */
             position: relative; /* For z-index and button positioning */
+            height: 302px; /* Fixed height for consistent card size (256px icon + ~46px button) */
+            justify-content: space-between; /* Pushes icon to top, button to bottom */
         }
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
-        /* Removed .project-card h3 styling as h3 tags are being removed */
+        /* The h3 styling is removed as the title text is now part of the button */
         .project-card p { /* This rule is now effectively unused for project descriptions */
             display: none; /* Hide the description paragraph */
         }
@@ -117,10 +119,12 @@
             transition: background-color 0.3s ease;
             text-align: center;
             width: 100%; /* Button takes full width of card */
-            margin-top: auto; /* Pushes button to the bottom in a flex column */
             box-sizing: border-box; /* Include padding in width calculation */
             z-index: 10; /* Ensure button is on top of icon */
             font-size: 1.0em; /* Set font size for the button text */
+            white-space: nowrap; /* Ensure text stays on one line */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add ellipsis if text overflows */
         }
         .project-card .button:hover {
             background-color: #2980b9;
@@ -132,7 +136,7 @@
             display: block;
             border-radius: 8px 8px 0 0; /* Rounded top corners, sharp bottom */
             position: relative; /* Needed for z-index context */
-            z-index: 1; /* Below title and button */
+            z-index: 1; /* Below button */
         }
         .footer {
             margin-top: 50px; /* Space above footer */
