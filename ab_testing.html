@@ -3,29 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</title>
+    <title>Fast Food A/B/C Testing</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f8f8f8;
-            color: #333;
+            background-color: #333333; /* Furthest background: Dark grey */
+            color: #f8f8f8; /* Lighter text for elements directly on dark background */
             line-height: 1.6;
         }
         .container {
             max-width: 960px;
             margin: 20px auto;
-            background-color: #ffffff;
-            padding: 30px;
+            background-color: #ffffff; /* Upper background: White */
+            padding: 0; /* Removed padding to allow banner/footer to fill edges */
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden; /* Ensures banner/footer's border-radius is respected */
+        }
+        .banner-section {
+            width: 100%;
+            height: 150px; /* Adjust height for sub-pages if needed, or keep consistent */
+            overflow: hidden;
+            border-radius: 10px 10px 0 0; /* Rounded top corners to match container */
+            position: relative;
+            margin-top: 5px; /* Bring the banner down by 5px */
+            background-color: #f0f0f0; /* Placeholder background for banner */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner-title {
+            color: #2c3e50; /* Darker color for main title on white background */
+            font-size: 2.2em;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .content-area { /* Wrapper for main content with consistent padding */
+            padding: 30px;
         }
         h1 {
             color: #2c3e50;
             text-align: center;
             margin-bottom: 25px;
             font-size: 2.2em;
+            display: none; /* Hide the h1 as it's replaced by banner-title */
         }
         h2 {
             color: #34495e;
@@ -89,119 +113,139 @@
         .project-links a {
             display: inline-block;
             margin: 0 10px;
-            padding: 8px 15px;
-            background-color: #5cb85c; /* Green for code links */
+            padding: 10px 20px; /* Increased padding to match main buttons */
+            background-color: #3498db; /* Changed to blue to match main buttons */
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            font-weight: bold; /* Added bold to match main buttons */
         }
         .project-links a:hover {
-            background-color: #4cae4c;
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            background-color: #004d00; /* Dark green footer */
+            color: #ffffff; /* White text for dark green background */
+            padding: 20px 30px; /* Add padding to the footer */
+            border-radius: 0 0 10px 10px; /* Rounded bottom corners to match container */
+            text-align: center; /* Center footer text */
+            width: 100%; /* Make footer span full width */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .footer p { /* Adjust paragraph color within footer */
+            color: #ffffff;
+            margin: 0; /* Remove default paragraph margins within footer */
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</h1>
-        <p>This project analyzes the effectiveness of three distinct promotional strategies implemented by a fast-food chain using A/B/C testing methodology.</p>
-
-        <div class="project-links">
-            <a href="./Fast_Food_A-B_Testing/" target="_blank">View Project Code on GitHub</a>
-            <!-- If you have a live notebook viewer (e.g., nbviewer.jupyter.org), link it here -->
-            <!-- <a href="https://nbviewer.jupyter.org/github/chrisnaughton/Fast_Food_A-B_Testing/blob/main/notebooks/Fast_Food_A-B_Testing.ipynb" target="_blank">View Notebook</a> -->
+        <div class="banner-section">
+            <h1 class="banner-title">Fast Food A/B/C Testing</h1>
         </div>
 
-        <h2>Project Objectives</h2>
-        <ul>
-            <li><strong>Assess Statistical Significance:</strong> Determine if there are statistically significant differences in total sales performance among the three promotions.</li>
-            <li><strong>Identify Best Performers:</strong> Pinpoint which specific promotions perform better or worse than others.</li>
-            <li><strong>Provide Actionable Recommendations:</strong> Offer data-backed guidance for the fast-food chain's promotional strategy.</li>
-        </ul>
+        <div class="content-area">
+            <p>This project analyzes the effectiveness of three distinct promotional strategies implemented by a fast-food chain using A/B/C testing methodology.</p>
 
-        <h2>Dataset</h2>
-        <p>The analysis uses simulated sales data from a multi-week promotional campaign across various fast-food store locations. Key variables include:</p>
-        <ul>
-            <li><code>MarketID</code> and <code>LocationID</code>: Identifiers for markets and individual stores.</li>
-            <li><code>MarketSize</code>: Categorical classification of the market (Small, Medium, Large).</li>
-            <li><code>AgeOfStore</code>: Store age in years.</li>
-            <li><code>Promotion</code>: The specific promotion assigned to the store (1, 2, or 3).</li>
-            <li><code>SalesInThousands</code>: Weekly sales, which was aggregated to <strong>Total Sales per Location</strong> as the primary outcome metric.</li>
-        </ul>
+            <div class="project-links">
+                <a href="./Fast_Food_A-B_Testing/" target="_blank">View Project Code on GitHub</a>
+                <!-- If you have a live notebook viewer (e.g., nbviewer.jupyter.org), link it here -->
+                <!-- <a href="https://nbviewer.jupyter.org/github/chrisnaughton/Fast_Food_A-B_Testing/blob/main/notebooks/Fast_Food_A-B_Testing.ipynb" target="_blank">View Notebook</a> -->
+            </div>
 
-        <h2>Methodology</h2>
-        <ul>
-            <li><strong>Data Preprocessing:</strong> Weekly sales data was aggregated to <code>Total Sales per Location</code> to represent each store as a single experimental unit.</li>
-            <li><strong>Exploratory Data Analysis (EDA):</strong> Visualizations (e.g., box plots) were used to understand sales distributions across promotion groups. Covariate balance checks were performed on <code>MarketSize</code> and <code>AgeOfStore</code> to ensure fair comparisons between groups.</li>
-            <li><strong>Statistical Hypothesis Testing:</strong>
-                <ul>
-                    <li><strong>ANOVA (Analysis of Variance):</strong> An ANOVA test was conducted to determine if there was an overall statistically significant difference in mean total sales among the three promotion groups.</li>
-                    <li><strong>Tukey's HSD Post-Hoc Test:</strong> Since ANOVA indicated an overall significant difference, <strong>Tukey's Honestly Significant Difference (HSD) test</strong> was used for pairwise comparisons between promotions, controlling the family-wise error rate.</li>
-                </ul>
-            </li>
-        </ul>
+            <h2>Project Objectives</h2>
+            <ul>
+                <li><strong>Assess Statistical Significance:</strong> Determine if there are statistically significant differences in total sales performance among the three promotions.</li>
+                <li><strong>Identify Best Performers:</strong> Pinpoint which specific promotions perform better or worse than others.</li>
+                <li><strong>Provide Actionable Recommendations:</strong> Offer data-backed guidance for the fast-food chain's promotional strategy.</li>
+            </ul>
 
-        <h2>Key Findings</h2>
-        <p>The statistical analysis revealed clear differences in promotional effectiveness:</p>
-        <ul>
-            <li><strong>Overall Significance:</strong> The ANOVA test showed a <strong>statistically significant difference</strong> in total sales among the three promotions (p-value &lt; 0.05), indicating that the promotion choice does impact sales.</li>
-            <li><strong>Promotion 2 Underperforms:</strong> Promotion 1 generated approximately <strong>$43,078 more</strong> in total sales per location than Promotion 2, a <strong>statistically significant</strong> difference (p &lt; 0.05). Similarly, Promotion 3 generated approximately <strong>$32,140 more</strong> than Promotion 2 (p &lt; 0.05).</li>
-            <li><strong>Promotion 1 and Promotion 3 are Similar:</strong> There was <strong>no statistically significant difference</strong> in total sales between Promotion 1 and Promotion 3 (p &gt; 0.05). Both performed similarly well.</li>
-        </ul>
+            <h2>Dataset</h2>
+            <p>The analysis uses simulated sales data from a multi-week promotional campaign across various fast-food store locations. Key variables include:</p>
+            <ul>
+                <li><code>MarketID</code> and <code>LocationID</code>: Identifiers for markets and individual stores.</li>
+                <li><code>MarketSize</code>: Categorical classification of the market (Small, Medium, Large).</li>
+                <li><code>AgeOfStore</code>: Store age in years.</li>
+                <li><code>Promotion</code>: The specific promotion assigned to the store (1, 2, or 3).</li>
+                <li><code>SalesInThousands</code>: Weekly sales, which was aggregated to <strong>Total Sales per Location</strong> as the primary outcome metric.</li>
+            </ul>
 
-        <h2>Recommendations</h2>
-        <p>Based on these findings, we recommend:</p>
-        <ul>
-            <li><strong>Discontinue Promotion 2:</strong> This promotion consistently leads to significantly lower sales and should be <strong>avoided</strong> in future campaigns.</li>
-            <li><strong>Focus on Promotions 1 and 3:</strong> Both are effective in driving sales and are statistically comparable. The choice between them should be based on other business considerations like cost or operational complexity.</li>
-        </ul>
+            <h2>Methodology</h2>
+            <ul>
+                <li><strong>Data Preprocessing:</strong> Weekly sales data was aggregated to <code>Total Sales per Location</code> to represent each store as a single experimental unit.</li>
+                <li><strong>Exploratory Data Analysis (EDA):</strong> Visualizations (e.g., box plots) were used to understand sales distributions across promotion groups. Covariate balance checks were performed on <code>MarketSize</code> and <code>AgeOfStore</code> to ensure fair comparisons between groups.</li>
+                <li><strong>Statistical Hypothesis Testing:</strong>
+                    <ul>
+                        <li><strong>ANOVA (Analysis of Variance):</strong> An ANOVA test was conducted to determine if there was an overall statistically significant difference in mean total sales among the three promotion groups.</li>
+                        <li><strong>Tukey's HSD Post-Hoc Test:</strong> Since ANOVA indicated an overall significant difference, <strong>Tukey's Honestly Significant Difference (HSD) test</strong> was used for pairwise comparisons between promotions, controlling the family-wise error rate.</li>
+                    </ul>
+                </li>
+            </ul>
 
-        <h2>Limitations</h2>
-        <ul>
-            <li><strong>No Cost Data:</strong> Lacks cost data for full ROI analysis of each promotion.</li>
-            <li><strong>Short Duration:</strong> The 4-week sales data limits insights into long-term effects or sustained impact.</li>
-            <li><strong>External Factors:</strong> Unmeasured external variables (e.g., local events, competitor activities) were not controlled.</li>
-            <li><strong>Covariate Balance:</strong> A slight imbalance in `MarketSize` distribution across groups could potentially confound results.</li>
-            <li><strong>Generalizability:</strong> Findings may not perfectly apply to all store locations or future campaigns without further validation.</li>
-        </ul>
+            <h2>Key Findings</h2>
+            <p>The statistical analysis revealed clear differences in promotional effectiveness:</p>
+            <ul>
+                <li><strong>Overall Significance:</strong> The ANOVA test showed a <strong>statistically significant difference</strong> in total sales among the three promotions (p-value &lt; 0.05), indicating that the promotion choice does impact sales.</li>
+                <li><strong>Promotion 2 Underperforms:</strong> Promotion 1 generated approximately <strong>$43,078 more</strong> in total sales per location than Promotion 2, a <strong>statistically significant</strong> difference (p &lt; 0.05). Similarly, Promotion 3 generated approximately <strong>$32,140 more</strong> than Promotion 2 (p &lt; 0.05).</li>
+                <li><strong>Promotion 1 and Promotion 3 are Similar:</strong> There was <strong>no statistically significant difference</strong> in total sales between Promotion 1 and Promotion 3 (p &gt; 0.05). Both performed similarly well.</li>
+            </ul>
 
-        <h2>Future Work</h2>
-        <p>To enhance this analysis and provide more robust recommendations, consider:</p>
-        <ul>
-            <li><strong>Cost-Benefit Analysis:</strong> Integrate promotional cost data to determine the <strong>Return on Investment (ROI)</strong> for each strategy.</li>
-            <li><strong>Longer-Term Tracking:</strong> Conduct A/B tests over extended periods (e.g., 8-12 weeks) to assess sustained impact and customer behavior.</li>
-            <li><strong>Advanced Statistical Modeling:</strong> Utilize techniques like ANCOVA or mixed-effects models to explicitly control for confounding variables.</li>
-            <li><strong>Qualitative Feedback:</strong> Collect insights from store managers and customers regarding operational challenges and promotion appeal.</li>
-            <li><strong>Targeted A/B Test (P1 vs. P3):</strong> Design a dedicated, larger-scale A/B test specifically comparing Promotion 1 and Promotion 3 to uncover subtle differences if needed.</li>
-        </ul>
+            <h2>Recommendations</h2>
+            <p>Based on these findings, we recommend:</p>
+            <ul>
+                <li><strong>Discontinue Promotion 2:</strong> This promotion consistently leads to significantly lower sales and should be <strong>avoided</strong> in future campaigns.</li>
+                <li><strong>Focus on Promotions 1 and 3:</strong> Both are effective in driving sales and are statistically comparable. The choice between them should be based on other business considerations like cost or operational complexity.</li>
+            </ul>
 
-        <h2>Technologies Used</h2>
-        <ul>
-            <li><strong>Python</strong></li>
-            <li><strong>Pandas</strong> (for data manipulation)</li>
-            <li><strong>NumPy</strong> (for numerical operations)</li>
-            <li><strong>SciPy</strong> (for statistical tests)</li>
-            <li><strong>Statsmodels</strong> (for ANOVA and Tukey HSD)</li>
-            <li><strong>Matplotlib</strong> (for visualizations)</li>
-            <li><strong>Seaborn</strong> (for enhanced visualizations)</li>
-            <li><strong>Jupyter Notebook</strong> (for reproducible analysis)</li>
-        </ul>
+            <h2>Limitations</h2>
+            <ul>
+                <li><strong>No Cost Data:</strong> Lacks cost data for full ROI analysis of each promotion.</li>
+                <li><strong>Short Duration:</strong> The 4-week sales data limits insights into long-term effects or sustained impact.</li>
+                <li><strong>External Factors:</strong> Unmeasured external variables (e.g., local events, competitor activities) were not controlled.</li>
+                <li><strong>Covariate Balance:</strong> A slight imbalance in `MarketSize` distribution across groups could potentially confound results.</li>
+                <li><strong>Generalizability:</strong> Findings may not perfectly apply to all store locations or future campaigns without further validation.</li>
+            </ul>
 
-        <h2>How to Run the Analysis</h2>
-        <p>To replicate and explore this project locally:</p>
-        <div class="code-block">
-            <pre><code>git clone https://github.com/chrisnaughton/Fast_Food_A-B_Testing.git
+            <h2>Future Work</h2>
+            <p>To enhance this analysis and provide more robust recommendations, consider:</p>
+            <ul>
+                <li><strong>Cost-Benefit Analysis:</strong> Integrate promotional cost data to determine the <strong>Return on Investment (ROI)</strong> for each strategy.</li>
+                <li><strong>Longer-Term Tracking:</strong> Conduct A/B tests over extended periods (e.g., 8-12 weeks) to assess sustained impact and customer behavior.</li>
+                <li><strong>Advanced Statistical Modeling:</strong> Utilize techniques like ANCOVA or mixed-effects models to explicitly control for confounding variables.</li>
+                <li><strong>Qualitative Feedback:</strong> Collect insights from store managers and customers regarding operational challenges and promotion appeal.</li>
+                <li><strong>Targeted A/B Test (P1 vs. P3):</strong> Design a dedicated, larger-scale A/B test specifically comparing Promotion 1 and Promotion 3 to uncover subtle differences if needed.</li>
+            </ul>
+
+            <h2>Technologies Used</h2>
+            <ul>
+                <li><strong>Python</strong></li>
+                <li><strong>Pandas</strong> (for data manipulation)</li>
+                <li><strong>NumPy</strong> (for numerical operations)</li>
+                <li><strong>SciPy</strong> (for statistical tests)</li>
+                <li><strong>Statsmodels</strong> (for ANOVA and Tukey HSD)</li>
+                <li><strong>Matplotlib</strong> (for visualizations)</li>
+                <li><strong>Seaborn</strong> (for enhanced visualizations)</li>
+                <li><strong>Jupyter Notebook</strong> (for reproducible analysis)</li>
+            </ul>
+
+            <h2>How to Run the Analysis</h2>
+            <p>To replicate and explore this project locally:</p>
+            <div class="code-block">
+                <pre><code>git clone https://github.com/chrisnaughton/Fast_Food_A-B_Testing.git
 cd Fast_Food_A-B_Testing
 pip install pandas numpy scipy statsmodels matplotlib seaborn jupyter
 jupyter notebook
-            </code></pre>
-        </div>
-        <p>Then open the `Fast_Food_A-B_Testing.ipynb` file.</p>
-        <p><em>(Note: Ensure your dataset CSV file, e.g., `FAST_FOOD_Marketing-Campaign.csv`, is in the same directory as the Jupyter Notebook.)</em></p>
+                </code></pre>
+            </div>
+            <p><em>(Note: Ensure your dataset CSV file, e.g., `FAST_FOOD_Marketing-Campaign.csv`, is in the same directory as the Jupyter Notebook.)</em></p>
 
-        <div class="nav-links">
-            <a href="index.html">Back to Portfolio Home</a>
+            <div class="nav-links">
+                <a href="index.html">Back to Portfolio Home</a>
+            </div>
         </div>
     </div>
 </body>
