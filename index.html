@@ -29,6 +29,7 @@
             overflow: hidden;
             border-radius: 10px 10px 0 0; /* Rounded top corners to match container */
             position: relative;
+            margin-top: 5px; /* Bring the banner down by 5px */
         }
         .banner-image {
             width: 100%;
@@ -104,7 +105,7 @@
         .project-card h3 {
             color: white; /* White text for title over icon */
             margin: 0; /* Remove default margins */
-            font-size: 0.8em; /* 20% smaller than 1.0em */
+            font-size: 0.6em; /* 25% smaller than 0.8em (0.8 * 0.75 = 0.6) */
             text-align: center;
             line-height: 1.2;
             flex-grow: 0; /* Don't grow, just fit content */
@@ -114,7 +115,7 @@
             min-height: 40px; /* Ensure enough space for title */
             z-index: 10; /* Above icon */
             position: absolute; /* Position over the icon */
-            top: 5px; /* 5 pixels from top of icon */
+            top: 3px; /* 3 pixels from top of icon */
             left: 0;
             right: 0;
             white-space: nowrap; /* Keep text on one line */
@@ -199,7 +200,6 @@
         </div>
 
         <div class="content-area">
-            <!-- Removed the h2 "My Projects:" as requested -->
             <div class="project-grid">
                 <!-- Project 1: Superstore Profitability Analysis -->
                 <div class="project-card">
@@ -239,4 +239,3 @@
     </div>
 </body>
 </html>
-```
