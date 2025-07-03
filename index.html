@@ -102,33 +102,14 @@
             transform: translateY(-5px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
-        .project-card h3 {
-            color: white; /* White text for title over icon */
-            margin: 0; /* Remove default margins */
-            font-size: 0.6em; /* 25% smaller than 0.8em (0.8 * 0.75 = 0.6) */
-            text-align: center;
-            line-height: 1.2;
-            flex-grow: 0; /* Don't grow, just fit content */
-            display: flex;
-            align-items: center; /* Center text vertically */
-            justify-content: center; /* Center text horizontally */
-            min-height: 40px; /* Ensure enough space for title */
-            z-index: 10; /* Above icon */
-            position: absolute; /* Position over the icon */
-            top: 3px; /* 3 pixels from top of icon */
-            left: 0;
-            right: 0;
-            white-space: nowrap; /* Keep text on one line */
-            overflow: hidden; /* Hide overflow */
-            text-overflow: ellipsis; /* Add ellipsis if text overflows */
-        }
+        /* Removed .project-card h3 styling as h3 tags are being removed */
         .project-card p { /* This rule is now effectively unused for project descriptions */
             display: none; /* Hide the description paragraph */
         }
         .project-card .button {
             display: block; /* Make button take full width */
             background-color: #3498db;
-            color: white;
+            color: white; /* Text color is white */
             padding: 15px 0; /* Vertical padding */
             border-radius: 0 0 8px 8px; /* Rounded bottom corners to match card */
             text-decoration: none;
@@ -139,6 +120,7 @@
             margin-top: auto; /* Pushes button to the bottom in a flex column */
             box-sizing: border-box; /* Include padding in width calculation */
             z-index: 10; /* Ensure button is on top of icon */
+            font-size: 1.0em; /* Set font size for the button text */
         }
         .project-card .button:hover {
             background-color: #2980b9;
@@ -203,31 +185,27 @@
             <div class="project-grid">
                 <!-- Project 1: Superstore Profitability Analysis -->
                 <div class="project-card">
-                    <h3>Superstore Profitability Analysis</h3>
                     <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
-                    <a href="superstore.html" class="button">View Project</a>
+                    <a href="superstore.html" class="button">Superstore Profitability Analysis</a>
                 </div>
 
                 <!-- Project 2: Telecom Customer Churn Prediction & Driver Analysis -->
                 <div class="project-card">
-                    <h3>Churn Analysis - Telecom</h3>
                     <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
-                    <a href="churn.html" class="button">View Project</a>
+                    <a href="churn.html" class="button">Churn Analysis - Telecom</a>
                 </div>
 
                 <!-- Project 3: A/B/C Testing Analysis -->
                 <div class="project-card">
-                    <h3>A/B/C Testing - Fast Food Promotion</h3>
                     <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
-                    <a href="ab_testing.html" class="button">View Project</a>
+                    <a href="ab_testing.html" class="button">A/B/C Testing - Fast Food Promotion</a>
                 </div>
             </div>
 
             <div class="resume-card-wrapper">
                 <div class="project-card">
-                    <h3>My Resume</h3>
                     <img src="images/Resume.jpg" alt="Resume Icon" class="project-icon">
-                    <a href="resume.html" class="button">View Resume</a>
+                    <a href="resume.html" class="button">My Resume</a>
                 </div>
             </div>
         </div> <!-- End of content-area for projects/resume -->
