@@ -10,7 +10,7 @@
             margin: 0;
             padding: 20px;
             background-color: #333333; /* Furthest background: Dark grey */
-            color: #333; /* Default text color for elements outside container */
+            color: #f8f8f8; /* Lighter text for elements directly on dark background */
             line-height: 1.6;
         }
         .container {
@@ -84,7 +84,7 @@
         .project-card h3 {
             color: #3498db; /* Blue for card titles */
             margin-top: 0;
-            font-size: 1.5em;
+            font-size: 0.9em; /* 40% smaller than 1.5em (1.5 * 0.6 = 0.9) */
             margin-bottom: 10px;
             text-align: center; /* Centered project titles */
         }
@@ -106,16 +106,16 @@
             transition: background-color 0.3s ease;
             margin-top: 15px;
             text-align: center; /* Centered button text */
-            width: fit-content; /* Ensure button width fits content */
-            margin-left: auto; /* Center button horizontally */
-            margin-right: auto; /* Center button horizontally */
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
         }
         .project-card .button:hover {
             background-color: #2980b9;
         }
         .project-icon {
-            width: 80px;
-            height: 80px;
+            width: 128px; /* 60% larger than 80px (80 * 1.6 = 128) */
+            height: 128px; /* 60% larger than 80px */
             object-fit: contain;
             margin-bottom: 15px;
             display: block;
@@ -151,44 +151,39 @@
         <p class="project-description">
             Hello, and welcome to my <strong>Data Science and Analytics portfolio</strong>! <br><br>
             My name, as you might have guessed by the title, is <strong>Chris Naughton</strong>. <br><br>
-            I am a theater artist, baker, game designer, and (most relevantly at this moment) a <strong>data analyst</strong>. <br>
+            I am a baker, game designer, and (most relevantly at this moment) a <strong>data analyst</strong>. <br>
             This collection of projects was chosen to display my skills in <strong>data cleaning, analysis, visualization, and machine learning</strong>. Each project includes key insights, methodologies, and actionable recommendations.
         </p>
 
         <h2>My Projects:</h2>
         <div class="project-grid">
-            <!-- Project 1: Superstore Profitability Analysis -->
             <div class="project-card">
                 <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
                 <h3>Superstore Profitability Analysis</h3>
-                <p>An in-depth analysis of the Superstore dataset to diagnose profit erosion, identify strategic opportunities, and provide actionable recommendations for enhancing overall business profitability.</p>
+                <p>Analyzed Superstore data to diagnose profit erosion and identify strategic opportunities. Provided actionable recommendations.</p>
                 <a href="superstore.html" class="button">View Project</a>
             </div>
 
-            <!-- Project 2: Telecom Customer Churn Prediction & Driver Analysis -->
             <div class="project-card">
                 <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
                 <h3>Telecom Customer Churn Prediction & Driver Analysis</h3>
-                <p>Development of a Logistic Regression model to accurately forecast customer churn in a telecom context and identify key factors driving retention and attrition.</p>
+                <p>Developed Logistic Regression model for churn prediction, identifying key factors driving customer retention/attrition.</p>
                 <a href="churn.html" class="button">View Project</a>
             </div>
 
-            <!-- Project 3: A/B/C Testing Analysis -->
             <div class="project-card">
                 <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
                 <h3>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</h3>
-                <p>Statistical analysis of three distinct fast-food promotional strategies to determine their effectiveness in driving sales and provide data-driven recommendations.</p>
+                <p>Statistical analysis of three fast-food promotions to determine effectiveness and provide data-driven recommendations.</p>
                 <a href="ab_testing.html" class="button">View Project</a>
             </div>
         </div>
 
-        <!-- New Wrapper for Centered Resume Card -->
         <div class="resume-card-wrapper">
-            <!-- Resume Card -->
             <div class="project-card">
                 <img src="images/Resume.jpg" alt="Resume Icon" class="project-icon">
                 <h3>My Resume</h3>
-                <p>A detailed overview of my professional experience, skills, and qualifications in data science and analytics.</p>
+                <p>A concise overview of my professional experience, skills, and qualifications in data science.</p>
                 <a href="resume.html" class="button">View Resume</a>
             </div>
         </div>
