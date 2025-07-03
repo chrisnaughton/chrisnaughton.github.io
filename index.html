@@ -110,12 +110,8 @@
             margin-bottom: 10px;
             text-align: center; /* Centered project titles */
         }
-        .project-card p {
-            font-size: 0.95em;
-            color: #777; /* Darker color for card description */
-            margin-bottom: 15px;
-            text-align: left;
-            flex-grow: 1;
+        .project-card p { /* This rule is now effectively unused for project descriptions */
+            display: none; /* Hide the description paragraph */
         }
         .project-card .button {
             display: inline-block;
@@ -148,8 +144,13 @@
         .footer {
             margin-top: 50px;
             font-size: 0.9em;
-            color: #888; /* Darker color for footer on white background */
-            /* Padding handled by .content-area */
+            background-color: #004d00; /* Dark green footer */
+            color: #ffffff; /* White text for dark green background */
+            padding: 20px 30px; /* Add padding to the footer */
+            border-radius: 0 0 10px 10px; /* Rounded bottom corners to match container */
+        }
+        .footer p { /* Adjust paragraph color within footer */
+            color: #ffffff;
         }
         /* Style for centered resume card */
         .resume-card-wrapper {
@@ -182,13 +183,13 @@
                 <img src="images/SubBanner.jpg" alt="My Projects Sub-Banner" class="sub-banner-image">
             </div>
 
-            <h2>My Projects:</h2> <!-- Re-added this H2 as the user's last instruction was to replace "My Projects" with an image, not remove the heading entirely. If the user wants this removed, they need to explicitly state to remove the H2. -->
+            <h2>My Projects:</h2>
             <div class="project-grid">
                 <!-- Project 1: Superstore Profitability Analysis -->
                 <div class="project-card">
                     <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
                     <h3>Superstore Profitability Analysis</h3>
-                    <p>Analyzed Superstore data to diagnose profit erosion and identify strategic opportunities. Provided actionable recommendations.</p>
+                    <!-- Removed description paragraph -->
                     <a href="superstore.html" class="button">View Project</a>
                 </div>
 
@@ -196,7 +197,7 @@
                 <div class="project-card">
                     <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
                     <h3>Telecom Customer Churn Prediction & Driver Analysis</h3>
-                    <p>Developed Logistic Regression model for churn prediction, identifying key factors driving customer retention/attrition.</p>
+                    <!-- Removed description paragraph -->
                     <a href="churn.html" class="button">View Project</a>
                 </div>
 
@@ -204,7 +205,7 @@
                 <div class="project-card">
                     <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
                     <h3>A/B/C Testing Analysis: Fast-Food Promotion Effectiveness</h3>
-                    <p>Statistical analysis of three fast-food promotions to determine effectiveness and provide data-driven recommendations.</p>
+                    <!-- Removed description paragraph -->
                     <a href="ab_testing.html" class="button">View Project</a>
                 </div>
             </div>
@@ -213,7 +214,7 @@
                 <div class="project-card">
                     <img src="images/Resume.jpg" alt="Resume Icon" class="project-icon">
                     <h3>My Resume</h3>
-                    <p>A concise overview of my professional experience, skills, and qualifications in data science.</p>
+                    <!-- Removed description paragraph -->
                     <a href="resume.html" class="button">View Resume</a>
                 </div>
             </div>
