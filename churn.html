@@ -4,148 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telecom Churn Analysis</title>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #333333; /* Furthest background: Dark grey */
-            color: #f8f8f8; /* Lighter text for elements directly on dark background */
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 960px;
-            margin: 20px auto;
-            background-color: #ffffff; /* Upper background: White */
-            padding: 0; /* Removed padding to allow banner/footer to fill edges */
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            overflow: hidden; /* Ensures banner/footer's border-radius is respected */
-        }
-        .banner-section {
-            width: 100%;
-            height: 150px; /* Consistent height for sub-page banners */
-            overflow: hidden;
-            border-radius: 10px 10px 0 0; /* Rounded top corners to match container */
-            position: relative;
-            margin-top: 5px; /* Consistent margin-top */
-            background-color: #f0f0f0; /* Placeholder background for banner */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .banner-title {
-            color: #2c3e50; /* Darker color for main title on white background */
-            font-size: 2.2em;
-            margin: 0;
-            padding: 0 20px;
-        }
-        .content-area { /* Wrapper for main content with consistent padding */
-            padding: 30px;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 25px;
-            font-size: 2.2em;
-            display: none; /* Hide the h1 as it's replaced by banner-title */
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.8em;
-            text-align: left;
-        }
-        h3 {
-            color: #3498db;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1.4em;
-            text-align: left;
-        }
-        p, ul, ol {
-            margin-bottom: 15px;
-            color: #555;
-            font-size: 1.05em;
-            text-align: left;
-        }
-        ul, ol {
-            padding-left: 25px;
-        }
-        .code-block {
-            background-color: #eef;
-            border: 1px solid #ddd;
-            border-left: 5px solid #3498db;
-            padding: 15px;
-            margin: 20px 0;
-            overflow-x: auto;
-            border-radius: 5px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9em;
-            color: #333;
-        }
-        .nav-links {
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-        .nav-links a {
-            display: inline-block;
-            margin: 0 15px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-weight: bold;
-        }
-        .nav-links a:hover {
-            background-color: #2980b9;
-        }
-        .project-links {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-        .project-links a {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 10px 20px; /* Increased padding to match main buttons */
-            background-color: #3498db; /* Changed to blue to match main buttons */
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-weight: bold; /* Added bold to match main buttons */
-        }
-        .project-links a:hover {
-            background-color: #2980b9; /* Darker blue on hover */
-        }
-        .footer {
-            margin-top: 50px;
-            font-size: 0.9em;
-            background-color: #004d00; /* Dark green footer */
-            color: #ffffff; /* White text for dark green background */
-            padding: 20px 30px; /* Add padding to the footer */
-            border-radius: 0 0 10px 10px; /* Rounded bottom corners to match container */
-            text-align: center; /* Center footer text */
-            width: 100%; /* Make footer span full width */
-            box-sizing: border-box; /* Include padding in width */
-        }
-        .footer p { /* Adjust paragraph color within footer */
-            color: #ffffff;
-            margin: 0; /* Remove default paragraph margins within footer */
-        }
-    </style>
+    <link rel="stylesheet" href="portfoliostyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="banner-section">
-            <h1 class="banner-title">Telecom Churn Analysis</h1>
+            <img src="images/Telecom Banner.jpg" alt="Telecom Churn Analysis Banner" class="banner-image">
+            <!-- The h1 with banner-title is removed as the image now serves as the banner -->
         </div>
 
         <div class="content-area">
@@ -228,6 +94,10 @@ jupyter notebook
             <div class="nav-links">
                 <a href="index.html">Back to Portfolio Home</a>
             </div>
+        </div>
+        <div class="footer">
+            <p>Built with passion by Chris Naughton</p>
+            <p>Last Updated: July 1, 2025</p>
         </div>
     </div>
 </body>
