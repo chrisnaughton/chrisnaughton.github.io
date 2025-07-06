@@ -3,40 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superstore Profitability Analysis</title>
+    <title>Superstore Profit Analysis</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f8f8f8;
-            color: #333;
+            background-color: #333333; /* Furthest background: Dark grey */
+            color: #f8f8f8; /* Lighter text for elements directly on dark background */
             line-height: 1.6;
         }
         .container {
-            max-width: 1200px;
+            max-width: 960px; /* Adjusted to match main page container width */
             margin: 20px auto;
-            background-color: #ffffff;
-            padding: 30px;
+            background-color: #ffffff; /* Upper background: White */
+            padding: 0; /* Removed padding to allow banner/footer to fill edges */
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #2c3e50;
             text-align: center;
-            margin-bottom: 25px;
-            font-size: 2.2em;
+            overflow: hidden; /* Ensures banner/footer's border-radius is respected */
+        }
+        .banner-section {
+            width: 100%;
+            height: 150px; /* Consistent height for sub-page banners, matching index sub-banner */
+            overflow: hidden;
+            border-radius: 10px 10px 0 0; /* Rounded top corners to match container */
+            position: relative;
+            margin-top: 5px; /* Consistent margin-top */
+            /* Removed background-color and flex properties as image will cover */
+        }
+        .banner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the area, cropping if aspect ratio differs */
+            object-position: center center; /* Center the image within the frame */
+            display: block;
+        }
+        /* Removed .banner-title styling as it's no longer needed with an image banner */
+        .content-area { /* Wrapper for main content with consistent padding */
+            padding: 30px;
+        }
+        h1 { /* Hidden as it's replaced by the image banner */
+            display: none;
         }
         h2 {
             color: #34495e;
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            text-align: left; /* Align left for subheadings */
+            margin-top: 30px;
+            margin-bottom: 15px;
             font-size: 1.8em;
         }
+        h3 { /* Retained for dashboard talking points, but adjusted color */
+            color: #34495e; /* Consistent with h2 for better readability on white background */
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            text-align: left;
+        }
         p {
-            text-align: center;
-            margin-bottom: 30px;
+            text-align: left; /* Align left for paragraphs */
+            margin-bottom: 20px; /* Adjusted margin */
             color: #555;
             font-size: 1.1em;
         }
@@ -77,94 +103,121 @@
         .project-links a {
             display: inline-block;
             margin: 0 10px;
-            padding: 8px 15px;
-            background-color: #5cb85c; /* Green for code links */
+            padding: 10px 20px; /* Consistent padding */
+            background-color: #3498db; /* Blue to match other buttons */
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            font-weight: bold; /* Added bold to match main buttons */
         }
         .project-links a:hover {
-            background-color: #4cae4c;
+            background-color: #2980b9; /* Darker blue on hover */
         }
         .dashboard-talking-points {
             text-align: left;
             margin: 0 auto 30px auto;
-            max-width: 900px; /* Adjust as needed */
-            padding: 0 15px;
+            max-width: 100%; /* Adjusted to fit container width */
+            padding: 0; /* Remove padding here, handled by content-area */
         }
         .dashboard-talking-points ul {
             list-style-type: disc;
             padding-left: 20px;
             margin-top: 10px;
+            color: #555; /* Consistent text color */
         }
         .dashboard-talking-points li {
             margin-bottom: 8px;
-            color: #444;
+            color: #555; /* Consistent text color */
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            background-color: #004d00; /* Dark green footer */
+            color: #ffffff; /* White text for dark green background */
+            padding: 20px 30px; /* Add padding to the footer */
+            border-radius: 0 0 10px 10px; /* Rounded bottom corners to match container */
+            text-align: center; /* Center footer text */
+            width: 100%; /* Make footer span full width */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .footer p { /* Adjust paragraph color within footer */
+            color: #ffffff;
+            margin: 0; /* Remove default paragraph margins within footer */
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Superstore Profitability Analysis</h1>
-        <p>This project delves into the Superstore dataset to uncover critical insights into sales performance, profit drivers, and customer behavior. Explore the interactive dashboards below:</p>
-
-        <div class="project-links">
-            <a href="./Superstore-Profitability-Analysis/" target="_blank">View Project Code on GitHub</a>
-            <!-- Add link to your Tableau Public workbook if you want a direct link to the whole workbook -->
-            <!-- <a href="https://public.tableau.com/profile/chrisnaughton#!/vizhome/SQLDashboards/Dashboard1" target="_blank">View Full Workbook on Tableau Public</a> -->
+        <div class="banner-section">
+            <img src="images/Super Store Banner.jpg" alt="Superstore Banner" class="banner-image">
+            <!-- The h1 with banner-title is removed as per the request to replace with image -->
         </div>
 
-        <h2>Dashboard 1: Executive Overview & Business Health</h2>
-        <div class="dashboard-talking-points">
-            <ul>
-                <li>This dashboard provides our <strong>executive overview</strong>: from 2011-2014, we generated <strong>$12.6 million in sales</strong> and <strong>$1.47 million in profit</strong>, with a <strong>12% overall gross profit margin</strong>.</li>
-                <li>Observe the <strong>quarterly sales and profit trends</strong>. Despite nearly 100% sales growth over 4 years, our profit margin remained stable, indicating a need to focus on efficiency for proportional profit growth.</li>
-                <li>The segment breakdown shows the <strong>Consumer segment drives most sales</strong>, followed by Corporate, with Home Office sales less than half of Corporate.</li>
-            </ul>
-        </div>
-        <div class='tableauPlaceholder' id='viz1751392352194' style='position: relative'>
-            <noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
-        <script type='text/javascript'>var divElement = document.getElementById('viz1751392352194'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='1127px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+        <div class="content-area">
+            <p>This project delves into the Superstore dataset to uncover critical insights into sales performance, profit drivers, and customer behavior. Explore the interactive dashboards below:</p>
 
-        <h2>Dashboard 2: Discount Impact & Transactional Loss</h2>
-        <div class="dashboard-talking-points">
-            <ul>
-                <li>This dashboard highlights <b>where we're losing money</b>, driven by discounts. See our <b>top loss-leading products</b> like "Tables" and "Machines."</li>
-                <li><strong>Tables are a major loss leader</strong>, with negative profit margin worsening from -5.1% (2012) to -12.5% (2014), largely due to <b>excessive 70-80% discounts</b> on items like "Lesro Training Table."</li>
-                <li>Even in profitable categories like Binders, we see <b>profit margin erosion</b>: many individual transactions are highly unprofitable (-50% to -200% margins) due to extreme 70-80% discounts on multiple units, e.g., "GBC DocuBind P400 Electric Binding System." Volume isn't consistently translating to profit.</li>
-                <li>The histogram confirms <b>extreme discounts consistently lead to unprofitable transactions</b>, and the heatmap pinpoints <b>"hotspots" for immediate discount practice review</b>.</li>
-            </ul>
-        </div>
-        <div class='tableauPlaceholder' id='viz1751392546987' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Discounts&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards-Discounts&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Discounts&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
-        <script type='text/javascript'>var divElement = document.getElementById('viz1751392546987'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='1227px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+            <div class="project-links">
+                <a href="./Superstore-Profitability-Analysis/" target="_blank">View Project Code on GitHub</a>
+                <!-- Add link to your Tableau Public workbook if you want a direct link to the whole workbook -->
+                <!-- <a href="https://public.tableau.com/profile/chrisnaughton#!/vizhome/SQLDashboards/Dashboard1" target="_blank">View Full Workbook on Tableau Public</a> -->
+            </div>
 
-        <h2>Dashboard 3: Geographic Performance & Profitability</h2>
-        <div class="dashboard-talking-points">
-            <ul>
-                <li>This dashboard reveals our <b>geographic wins and losses</b>. The bar chart highlights consistent loss-leading countries/regions like the <b>Dominican Republic, Nigeria, Zimbabwe, and Uganda</b>, primarily due to large discounts exceeding margins.</li>
-                <li>The global profit map quickly visualizes <b>profitability worldwide</b>, showing our strongest and weakest markets.</li>
-                <li>Many highly unprofitable individual sales, especially for "Binder" products with 0.7 or 0.8 discounts (e.g., "GBC Ibimaster 500 Manual ProClick Binding System"), originate from <b>specific US regions (Central and South), Nigeria, and Sweden</b>. This confirms widespread discount misuse across geographies.</li>
-            </ul>
-        </div>
-        <div class='tableauPlaceholder' id='viz1751392608446' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards-Suggestions&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
-        <script type='text/javascript'>var divElement = document.getElementById('viz1751392608446'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='977px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+            <h2>Dashboard 1: Executive Overview & Business Health</h2>
+            <div class="dashboard-talking-points">
+                <ul>
+                    <li>This dashboard provides our <strong>executive overview</strong>: from 2011-2014, we generated <strong>$12.6 million in sales</strong> and <strong>$1.47 million in profit</strong>, with a <strong>12% overall gross profit margin</strong>.</li>
+                    <li>Observe the <strong>quarterly sales and profit trends</strong>. Despite nearly 100% sales growth over 4 years, our profit margin remained stable, indicating a need to focus on efficiency for proportional profit growth.</li>
+                    <li>The segment breakdown shows the <strong>Consumer segment drives most sales</strong>, followed by Corporate, with Home Office sales less than half of Corporate.</li>
+                </ul>
+            </div>
+            <div class='tableauPlaceholder' id='viz1751392352194' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
+            <script type='text/javascript'>var divElement = document.getElementById('viz1751392352194'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='1127px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
 
-        <h2>Dashboard 4: Strategic Opportunities & Overall Trends</h2>
-        <div class="dashboard-talking-points">
-            <ul>
-                <li>This dashboard identifies <b>strategic opportunities and overall trends</b>. Our <b>highest performing sub-categories by profit</b> include "Paper" (exceptionally profitable) and "Copiers" (e.g., "Canon imageCLASS 2200 Advanced Copier") and "Phones" within Technology.</li>
-                <li>The pie chart shows our <b>profit vs. loss ratio</b>, highlighting the proportion of items selling profitably. The breakdown of loss-making items by sub-category pinpoints specific attention areas.</li>
-                <li>The sales by month line graph reveals <b>clear seasonal patterns</b>, consistently peaking in Q4 (Oct-Dec) with a Q1 dip, crucial for planning.</li>
-                <li>Our <b>Average Lifetime Profit Per Customer is approximately $922.93</b>. While Consumer sales are high, their AOV is declining. Conversely, Home Office shows strong AOV growth, a key area for targeted engagement.</li>
-            </ul>
-        </div>
-        <div class='tableauPlaceholder' id='viz1751392808776' style='position: relative'><noscript><a href='#'><img alt='Dashboard 4 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards-Suggestions&#47;Dashboard4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
-        <script type='text/javascript'>var divElement = document.getElementById('viz1751392808776'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='1227px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+            <h2>Dashboard 2: Discount Impact & Transactional Loss</h2>
+            <div class="dashboard-talking-points">
+                <ul>
+                    <li>This dashboard highlights <b>where we're losing money</b>, driven by discounts. See our <b>top loss-leading products</b> like "Tables" and "Machines."</li>
+                    <li><strong>Tables are a major loss leader</strong>, with negative profit margin worsening from -5.1% (2012) to -12.5% (2014), largely due to <b>excessive 70-80% discounts</b> on items like "Lesro Training Table."</li>
+                    <li>Even in profitable categories like Binders, we see <b>profit margin erosion</b>: many individual transactions are highly unprofitable (-50% to -200% margins) due to extreme 70-80% discounts on multiple units, e.g., "GBC DocuBind P400 Electric Binding System." Volume isn't consistently translating to profit.</li>
+                    <li>The histogram confirms <b>extreme discounts consistently lead to unprofitable transactions</b>, and the heatmap pinpoints <b>"hotspots" for immediate discount practice review</b>.</li>
+                </ul>
+            </div>
+            <div class='tableauPlaceholder' id='viz1751392546987' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Discounts&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com&#47;' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards-Discounts&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Discounts&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
+            <script type='text/javascript'>var divElement = document.getElementById('viz1751392546987'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='1227px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
 
-        <div class="nav-links">
-            <a href="index.html">Back to Portfolio Home</a>
+            <h2>Dashboard 3: Geographic Performance & Profitability</h2>
+            <div class="dashboard-talking-points">
+                <ul>
+                    <li>This dashboard reveals our <b>geographic wins and losses</b>. The bar chart highlights consistent loss-leading countries/regions like the <b>Dominican Republic, Nigeria, Zimbabwe, and Uganda</b>, primarily due to large discounts exceeding margins.</li>
+                    <li>The global profit map quickly visualizes <b>profitability worldwide</b>, showing our strongest and weakest markets.</li>
+                    <li>Many highly unprofitable individual sales, especially for "Binder" products with 0.7 or 0.8 discounts (e.g., "GBC Ibimaster 500 Manual ProClick Binding System"), originate from <b>specific US regions (Central and South), Nigeria, and Sweden</b>. This confirms widespread discount misuse across geographies.</li>
+                </ul>
+            </div>
+            <div class='tableauPlaceholder' id='viz1751392608446' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com&#47;' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards-Suggestions&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
+            <script type='text/javascript'>var divElement = document.getElementById('viz1751392608446'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='977px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+
+            <h2>Dashboard 4: Strategic Opportunities & Overall Trends</h2>
+            <div class="dashboard-talking-points">
+                <ul>
+                    <li>This dashboard identifies <b>strategic opportunities and overall trends</b>. Our <b>highest performing sub-categories by profit</b> include "Paper" (exceptionally profitable) and "Copiers" (e.g., "Canon imageCLASS 2200 Advanced Copier") and "Phones" within Technology.</li>
+                    <li>The pie chart shows our <b>profit vs. loss ratio</b>, highlighting the proportion of items selling profitably. The breakdown of loss-making items by sub-category pinpoints specific attention areas.</li>
+                    <li>The sales by month line graph reveals <b>clear seasonal patterns</b>, consistently peaking in Q4 (Oct-Dec) with a Q1 dip, crucial for planning.</li>
+                    <li>Our <b>Average Lifetime Profit Per Customer is approximately $922.93</b>. While Consumer sales are high, their AOV is declining. Conversely, Home Office shows strong AOV growth, a key area for targeted engagement.</li>
+                </ul>
+            </div>
+            <div class='tableauPlaceholder' id='viz1751392808776' style='position: relative'><noscript><a href='#'><img alt='Dashboard 4 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com&#47;' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SQLDashboards-Suggestions&#47;Dashboard4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQLDashboards-Suggestions&#47;Dashboard4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
+            <script type='text/javascript'>var divElement = document.getElementById('viz1751392808776'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='727px';} else { vizElement.style.width='100%';vizElement.style.height='1227px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+
+            <div class="nav-links">
+                <a href="index.html">Back to Portfolio Home</a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Built with passion by Chris Naughton</p>
+            <p>Last Updated: July 1, 2025</p>
         </div>
     </div>
 </body>
