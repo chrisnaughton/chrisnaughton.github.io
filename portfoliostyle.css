@@ -3,7 +3,7 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #333333; /* Furthest background: Dark grey */
+    background-color: #000000; /* Furthest background: Dark grey */
     color: #f8f8f8; /* Lighter text for elements directly on dark background */
     line-height: 1.6;
 }
