@@ -1,64 +1,301 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Naughton's Data Science Portfolio</title>
-    <link rel="stylesheet" href="portfoliostyle.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="banner-section index-main-banner">
-            <img src="images/Banner.jpg" alt="Portfolio Banner" class="banner-image">
-        </div>
+/* General Body and Container Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #333333; /* Furthest background: Dark grey */
+    color: #f8f8f8; /* Lighter text for elements directly on dark background */
+    line-height: 1.6;
+}
 
-        <div class="content-area">
-            <p class="project-description">
-                Hello, and welcome to my <strong>Data Science and Analytics portfolio</strong>! <br><br>
-                My name, as you might have guessed by the title, is <strong>Chris Naughton</strong>. <br><br>
-                I am a baker, game designer, and (most relevantly at this moment) a <strong>data analyst</strong>. <br>
-                This collection of projects was chosen to display my skills in <strong>data cleaning, analysis, visualization, and machine learning</strong>. Each project includes key insights, methodologies, and actionable recommendations.
-            </p>
-        </div>
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #ffffff; /* Upper background: White */
+    padding: 0; /* Removed padding to allow banner/footer to fill edges */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Ensures banner/footer's border-radius is respected */
+}
 
-        <div class="sub-banner-section">
-            <img src="images/SubBanner.jpg" alt="My Projects Sub-Banner" class="banner-section">
-        </div>
+/* Banner Sections */
+.banner-section {
+    width: 100%;
+    height: 150px; /* Consistent height for all banners (main and sub-pages) */
+    overflow: hidden;
+    border-radius: 0; /* Changed to angular (not rounded) */
+    position: relative;
+    margin-top: 5px; /* Consistent margin-top for sub-page banners */
+    border: 3px solid #004d00; /* 3px green outline for all banners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
 
-        <div class="content-area">
-            <div class="project-grid">
-                <!-- Project 1: Superstore Profit Analysis -->
-                <div class="project-card">
-                    <img src="images/Superstore.jpg" alt="Superstore Icon" class="project-icon">
-                    <a href="superstore.html" class="button">Superstore Profit Analysis</a>
-                </div>
+/* Specific styling for the main banner on the index page */
+.index-main-banner {
+    height: 300px; /* Specific height for the main banner on index.html */
+    margin-top: 0; /* Main banner at the top of its container */
+    border-radius: 0; /* Ensure it's also angular */
+}
 
-                <!-- Project 2: Telecom Churn Analysis -->
-                <div class="project-card">
-                    <img src="images/Telecom.jpg" alt="Churn Icon" class="project-icon">
-                    <a href="churn.html" class="button">Telecom Churn Analysis</a>
-                </div>
+/* Specific styling for the sub-banner on the index page */
+.sub-banner-section {
+    width: 100%;
+    height: 150px; /* Height for the sub-banner (same aspect ratio as main banner) */
+    overflow: hidden;
+    margin-top: 5px; /* Adjusted to match other banners' top margin */
+    margin-bottom: 0; /* Removed extra margin for consistency */
+    border-radius: 0; /* Changed to angular (not rounded) */
+    border: 3px solid #004d00; /* 3px green outline for the sub-banner */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
 
-                <!-- Project 3: Fast Food A/B/C Testing -->
-                <div class="project-card">
-                    <img src="images/Fast Food.jpg" alt="A/B Testing Icon" class="project-icon">
-                    <a href="ab_testing.html" class="button">Fast Food A/B/C Testing</a>
-                </div>
-            </div>
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
 
-            <div class="resume-card-wrapper">
-                <div class="project-card">
-                    <img src="images/Resume.jpg" alt="Resume Icon" class="project-icon">
-                    <a href="resume.html" class="button">My Resume</a>
-                </div>
-            </div>
-        </div> <!-- End of content-area for projects/resume -->
+.banner-title {
+    color: #2c3e50; /* Darker color for main title on white background */
+    font-size: 2.2em;
+    margin: 0;
+    padding: 0 20px;
+    position: relative; /* Ensure title is on top of the image */
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for readability */
+    border-radius: 5px;
+    padding: 10px 20px;
+}
 
-        <div class="footer">
-            <p>Built with passion by Chris Naughton</p>
-            <p>Last Updated: July 1, 2025</p>
-        </div>
-    </div>
-</body>
-</html>
+/* Content Area */
+.content-area { /* Wrapper for main content with consistent padding */
+    padding: 30px;
+}
+
+/* Headings and Paragraphs */
+h1 { /* Hidden for pages using image banners */
+    display: none;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    text-align: left; /* Default alignment for content pages */
+}
+
+h3 {
+    color: #34495e; /* Consistent with h2 for better readability on white background */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    text-align: left;
+}
+
+p, ul, ol {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.05em;
+    text-align: left;
+}
+
+.project-description { /* Specific for index page intro text */
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 1.15em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul, ol {
+    padding-left: 25px;
+}
+
+/* Project Grid and Cards (Index Page) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #ecf0f1; /* Light background for cards */
+    padding: 0; /* No internal padding for icon/button to be flush */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Ensures content respects border-radius */
+    position: relative; /* For z-index and button positioning */
+    height: 271px; /* Adjusted height: 236px (icon) + 35px (button) */
+    justify-content: space-between; /* Pushes icon to top, button to bottom */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card .button {
+    display: flex; /* Use flexbox for vertical centering */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    background-color: #004d00; /* Green to match footer */
+    color: white; /* Text color is white */
+    padding: 0; /* Remove padding here, use min-height for vertical space */
+    min-height: 35px; /* Increased height by 15% (30 * 1.15 = 34.5) */
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners to match card */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Button takes full width of card */
+    box-sizing: border-box; /* Include padding in width calculation */
+    z-index: 10; /* Ensure button is on top of icon */
+    font-size: 1.1em; /* Increased font size by 10% */
+    white-space: nowrap; /* Ensure text stays on one line */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+.project-card .button:hover {
+    background-color: #003300; /* Darker green on hover */
+}
+
+.project-icon {
+    width: 100%; /* Icon fills the width of the card */
+    height: 236px; /* Scaled down by 20% (295 * 0.80 = 236) */
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    display: block;
+    border-radius: 8px 8px 0 0; /* Rounded top corners, sharp bottom */
+    position: relative; /* Needed for z-index context */
+    z-index: 1; /* Below button */
+}
+
+/* Resume Card Specific Styling */
+.resume-card-wrapper {
+    display: block;
+    width: 300px; /* Fixed width for the resume card wrapper */
+    margin: 25px auto 0 auto; /* Center the wrapper horizontally */
+}
+
+.resume-card-wrapper .project-card {
+    width: 100%; /* Make the card fill its parent wrapper */
+    margin: 0; /* Remove redundant auto margin from the card itself */
+}
+
+/* Code Block Styling */
+.code-block {
+    background-color: #eef;
+    border: 1px solid #ddd;
+    border-left: 5px solid #3498db; /* Keep blue for code block accent */
+    padding: 15px;
+    margin: 20px 0;
+    overflow-x: auto;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    color: #333;
+    text-align: left;
+}
+
+/* Navigation Links (Back to Home) */
+.nav-links {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 20px;
+    background-color: #004d00; /* Green to match footer */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    background-color: #003300; /* Darker green on hover */
+}
+
+/* Project Links (View Code on GitHub) */
+.project-links {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.project-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px; /* Consistent padding */
+    background-color: #004d00; /* Green to match footer */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Added bold to match main buttons */
+}
+
+.project-links a:hover {
+    background-color: #003300; /* Darker green on hover */
+}
+
+/* Download Button (Resume Page) */
+.download-button {
+    display: inline-block;
+    background-color: #004d00; /* Green to match footer */
+    color: white;
+    padding: 10px 20px; /* Consistent padding */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold; /* Consistent font-weight */
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+.download-button:hover {
+    background-color: #003300; /* Darker green on hover */
+}
+
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    background-color: #004d00; /* Dark green footer */
+    color: #ffffff; /* White text for dark green background */
+    padding: 20px 30px; /* Add padding to the footer */
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners to match container */
+    text-align: center; /* Center footer text */
+    width: 100%; /* Make footer span full width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.footer p { /* Adjust paragraph color within footer */
+    color: #ffffff;
+    margin: 0; /* Remove default paragraph margins within footer */
+    text-align: center; /* Centered footer text */
+}
+
+/* Tableau specific styling adjustments (for Superstore page) */
+.tableauPlaceholder {
+    width: 100%; /* Ensure it takes full width of its container */
+    height: 800px; /* Adjust height as needed for your dashboard */
+    margin: 0 auto; /* Center the embed */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Hide any overflow */
+}
