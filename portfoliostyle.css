@@ -27,13 +27,13 @@ body {
     border-radius: 0; /* Changed to angular (not rounded) */
     position: relative;
     margin-top: 5px; /* Consistent margin-top for sub-page banners */
-    border: 3px solid #004d00; /* 3px green outline for all banners */
+    border: 3px solid #3498db; /* 3px blue outline for all banners */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 /* Specific styling for the main banner on the index page */
 .index-main-banner {
-    height: 300px; /* Specific height for the main banner on index.html */
+    height: 320px; /* Increased height to give more room for text with outline */
     margin-top: 0; /* Main banner at the top of its container */
     border-radius: 0; /* Ensure it's also angular */
 }
@@ -46,7 +46,7 @@ body {
     margin-top: 5px; /* Adjusted to match other banners' top margin */
     margin-bottom: 0; /* Removed extra margin for consistency */
     border-radius: 0; /* Changed to angular (not rounded) */
-    border: 3px solid #004d00; /* 3px green outline for the sub-banner */
+    border: 3px solid #3498db; /* 3px blue outline for the sub-banner */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
@@ -149,7 +149,7 @@ ul, ol {
     display: flex; /* Use flexbox for vertical centering */
     align-items: center; /* Center text vertically */
     justify-content: center; /* Center text horizontally */
-    background-color: #004d00; /* Green to match footer */
+    background-color: #3498db; /* Changed to medium blue */
     color: white; /* Text color is white */
     padding: 0; /* Remove padding here, use min-height for vertical space */
     min-height: 35px; /* Increased height by 15% (30 * 1.15 = 34.5) */
@@ -167,7 +167,7 @@ ul, ol {
 }
 
 .project-card .button:hover {
-    background-color: #003300; /* Darker green on hover */
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
 .project-icon {
@@ -218,7 +218,7 @@ ul, ol {
     display: inline-block;
     margin: 0 15px;
     padding: 10px 20px;
-    background-color: #004d00; /* Green to match footer */
+    background-color: #3498db; /* Changed to medium blue */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -227,7 +227,7 @@ ul, ol {
 }
 
 .nav-links a:hover {
-    background-color: #003300; /* Darker green on hover */
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
 /* Project Links (View Code on GitHub) */
@@ -241,7 +241,7 @@ ul, ol {
     display: inline-block;
     margin: 0 10px;
     padding: 10px 20px; /* Consistent padding */
-    background-color: #004d00; /* Green to match footer */
+    background-color: #3498db; /* Changed to medium blue */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -250,13 +250,13 @@ ul, ol {
 }
 
 .project-links a:hover {
-    background-color: #003300; /* Darker green on hover */
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
 /* Download Button (Resume Page) */
 .download-button {
     display: inline-block;
-    background-color: #004d00; /* Green to match footer */
+    background-color: #3498db; /* Changed to medium blue */
     color: white;
     padding: 10px 20px; /* Consistent padding */
     border-radius: 5px;
@@ -266,7 +266,7 @@ ul, ol {
     margin-bottom: 25px;
 }
 .download-button:hover {
-    background-color: #003300; /* Darker green on hover */
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
 
@@ -274,7 +274,7 @@ ul, ol {
 .footer {
     margin-top: 50px;
     font-size: 0.9em;
-    background-color: #004d00; /* Dark green footer */
+    background-color: #3498db; /* Changed to medium blue */
     color: #ffffff; /* White text for dark green background */
     padding: 20px 30px; /* Add padding to the footer */
     border-radius: 0 0 10px 10px; /* Rounded bottom corners to match container */
