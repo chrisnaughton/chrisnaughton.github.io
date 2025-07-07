@@ -64,13 +64,13 @@ body {
 }
 
 /* Headings and Paragraphs */
-h1 { /* Hidden for pages using image banners */
-    display: none;
+h1, h2, h3 { /* Combined styles for all headings */
+    color: #34495e;
+    text-align: center; /* All headings aligned to the center */
 }
 
-h2, h3 { /* Combined styles for h2 and h3 */
-    color: #34495e;
-    text-align: left; /* Default alignment for content pages */
+h1 { /* Hidden for pages using image banners */
+    display: none;
 }
 
 h2 {
