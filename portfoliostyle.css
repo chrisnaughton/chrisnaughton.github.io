@@ -1,9 +1,8 @@
-/* General Body and Container Styling */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #000000; /* Furthest background: Dark grey */
+    background-color: #333333; /* Furthest background: Dark grey */
     color: #f8f8f8; /* Lighter text for elements directly on dark background */
     line-height: 1.6;
 }
@@ -138,8 +137,8 @@ ul, ol {
     display: flex; /* Use flexbox for vertical centering */
     align-items: center; /* Center text vertically */
     justify-content: center; /* Center text horizontally */
-    background-color: #898e44; /* Changed to light yellow */
-    color: #333; /* Changed text color for contrast */
+    background-color: #004d00; /* Dark green */
+    color: white; /* Changed text color for contrast */
     padding: 10px 20px; /* Consistent padding */
     border-radius: 5px;
     text-decoration: none;
@@ -152,7 +151,7 @@ ul, ol {
 }
 
 .common-button-style:hover {
-    background-color: #e0e0d0; /* Darker shade for hover */
+    background-color: #003300; /* Darker green for hover */
 }
 
 /* Specific button applications */
@@ -203,7 +202,7 @@ ul, ol {
 .code-block {
     background-color: #eef;
     border: 1px solid #ddd;
-    border-left: 5px solid #898e44; /* Changed to light yellow for code block accent */
+    border-left: 5px solid #fefff1; /* Changed to light yellow for code block accent */
     padding: 15px;
     margin: 20px 0;
     overflow-x: auto;
@@ -218,8 +217,8 @@ ul, ol {
 .footer {
     margin-top: 50px;
     font-size: 0.9em;
-    background-color: #898e44; /* Changed to light yellow */
-    color: #333; /* Changed text color for contrast */
+    background-color: #004d00; /* Dark green */
+    color: #ffffff; /* Changed text color for contrast */
     padding: 20px 30px; /* Add padding to the footer */
     border-radius: 0 0 10px 10px; /* Rounded bottom corners to match container */
     text-align: center; /* Center footer text */
@@ -228,7 +227,7 @@ ul, ol {
 }
 
 .footer p { /* Adjust paragraph color within footer */
-    color: #333; /* Changed text color for contrast */
+    color: #ffffff; /* Changed text color for contrast */
     margin: 0; /* Remove default paragraph margins within footer */
     text-align: center; /* Centered footer text */
 }
