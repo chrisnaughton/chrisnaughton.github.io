@@ -89,7 +89,6 @@ p, ul, ol {
     margin-bottom: 15px;
     color: #555;
     font-size: 1.05em;
-    /* Removed text-align: left; to allow .content-area's text-align: center; to apply */
 }
 
 ul, ol {
@@ -245,12 +244,23 @@ ul, ol {
 
 /* Tableau specific styling adjustments (for Superstore page) */
 .tableauPlaceholder {
-    width: 100%; /* Ensure it takes full width of its container */
-    height: 800px; /* Adjust height as needed for your dashboard */
-    margin: 0 auto; /* Center the embed */
+    position: relative; /* Needed for absolute positioning of the iframe */
+    width: 100%;
+    /* Maintain aspect ratio (e.g., 4:3 for dashboards often 1000x750px) */
+    padding-bottom: 75%; /* (height / width) * 100% = (750/1000)*100 = 75% */
+    height: 0; /* Collapse height, padding creates the space */
+    overflow: hidden; /* Hide any overflow from the iframe */
+    margin: 0 auto 20px auto; /* Center the embed and add some bottom margin */
     border: none;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    overflow: hidden; /* Hide any overflow */
+}
+
+.tableauPlaceholder object { /* Target the Tableau object/iframe inside the placeholder */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
