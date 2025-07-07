@@ -138,7 +138,7 @@ ul, ol {
     display: flex; /* Use flexbox for vertical centering */
     align-items: center; /* Center text vertically */
     justify-content: center; /* Center text horizontally */
-    background-color: #fefff1; /* Changed to light yellow */
+    background-color: #898e44; /* Changed to light yellow */
     color: #333; /* Changed text color for contrast */
     padding: 10px 20px; /* Consistent padding */
     border-radius: 5px;
@@ -203,7 +203,7 @@ ul, ol {
 .code-block {
     background-color: #eef;
     border: 1px solid #ddd;
-    border-left: 5px solid #fefff1; /* Changed to light yellow for code block accent */
+    border-left: 5px solid #898e44; /* Changed to light yellow for code block accent */
     padding: 15px;
     margin: 20px 0;
     overflow-x: auto;
@@ -218,7 +218,7 @@ ul, ol {
 .footer {
     margin-top: 50px;
     font-size: 0.9em;
-    background-color: #fefff1; /* Changed to light yellow */
+    background-color: #898e44; /* Changed to light yellow */
     color: #333; /* Changed text color for contrast */
     padding: 20px 30px; /* Add padding to the footer */
     border-radius: 0 0 10px 10px; /* Rounded bottom corners to match container */
