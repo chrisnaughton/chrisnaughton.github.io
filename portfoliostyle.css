@@ -1,7 +1,7 @@
 /* General Body and Container Styling */
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0; 
+    margin: 0;
     padding: 20px;
     background-color: #333333; /* Furthest background: Dark grey */
     color: #f8f8f8; /* Lighter text for elements directly on dark background */
@@ -19,35 +19,22 @@ body {
     overflow: hidden; /* Ensures banner/footer's border-radius is respected */
 }
 
-/* Banner Sections */
+/* Banner Sections - Base styles for all banners */
 .banner-section {
     width: 100%;
-    height: 150px; /* Consistent height for all banners (main and sub-pages) */
+    height: 150px; /* Consistent height for most banners */
     overflow: hidden;
-    border-radius: 0; /* Changed to angular (not rounded) */
+    border-radius: 0; /* Angular (not rounded) */
     position: relative;
-    margin-top: 0; /* Changed to 0px to touch the top of the container */
-    border: none; /* Removed outline for all banners */
+    margin-top: 0; /* Flush with the top of the container */
+    border: none; /* No outline for all banners */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 0; /* Ensures no extra margin below banners */
 }
 
-/* Specific styling for the main banner on the index page */
+/* Specific styling for the main banner on the index page (overrides .banner-section height) */
 .index-main-banner {
     height: 360px; /* Increased height to give more room for text with outline */
-    margin-top: 0; /* Main banner at the top of its container */
-    border-radius: 0; /* Ensure it's also angular */
-}
-
-/* Specific styling for the sub-banner on the index page */
-.sub-banner-section {
-    width: 100%;
-    height: 150px; /* Height for the sub-banner (same aspect ratio as main banner) */
-    overflow: hidden;
-    margin-top: 0; /* Adjusted to match other banners' top margin */
-    margin-bottom: 0; /* Removed extra margin for consistency */
-    border-radius: 0; /* Changed to angular (not rounded) */
-    border: none; /* Removed outline for the sub-banner */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .banner-image {
@@ -80,20 +67,21 @@ h1 { /* Hidden for pages using image banners */
     display: none;
 }
 
-h2 {
+h2, h3 { /* Combined styles for h2 and h3 */
     color: #34495e;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 1.8em;
     text-align: left; /* Default alignment for content pages */
 }
 
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
 h3 {
-    color: #34495e; /* Consistent with h2 for better readability on white background */
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 1.4em;
-    text-align: left;
 }
 
 p, ul, ol {
@@ -145,29 +133,48 @@ ul, ol {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.project-card .button {
+/* Common Button Styling */
+.common-button-style {
     display: flex; /* Use flexbox for vertical centering */
     align-items: center; /* Center text vertically */
     justify-content: center; /* Center text horizontally */
     background-color: #fefff1; /* Changed to light yellow */
     color: #333; /* Changed text color for contrast */
-    padding: 0; /* Remove padding here, use min-height for vertical space */
-    min-height: 35px; /* Increased height by 15% (30 * 1.15 = 34.5) */
-    border-radius: 0 0 8px 8px; /* Rounded bottom corners to match card */
+    padding: 10px 20px; /* Consistent padding */
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    width: 100%; /* Button takes full width of card */
     box-sizing: border-box; /* Include padding in width calculation */
-    z-index: 10; /* Ensure button is on top of icon */
-    font-size: 1.1em; /* Increased font size by 10% */
     white-space: nowrap; /* Ensure text stays on one line */
     overflow: hidden; /* Hide overflow */
     text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 
-.project-card .button:hover {
+.common-button-style:hover {
     background-color: #e0e0d0; /* Darker shade for hover */
+}
+
+/* Specific button applications */
+.project-card .button {
+    padding: 0; /* Override common padding for project card buttons */
+    min-height: 35px; /* Specific height for project card buttons */
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners to match card */
+    width: 100%; /* Button takes full width of card */
+    z-index: 10; /* Ensure button is on top of icon */
+    font-size: 1.1em; /* Increased font size by 10% */
+}
+
+.nav-links a {
+    margin: 0 15px; /* Specific margin for nav links */
+}
+
+.project-links a {
+    margin: 0 10px; /* Specific margin for project links */
+}
+
+.download-button {
+    margin-bottom: 25px; /* Specific margin for download button */
 }
 
 .project-icon {
@@ -206,69 +213,6 @@ ul, ol {
     color: #333;
     text-align: left;
 }
-
-/* Navigation Links (Back to Home) */
-.nav-links {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-.nav-links a {
-    display: inline-block;
-    margin: 0 15px;
-    padding: 10px 20px;
-    background-color: #fefff1; /* Changed to light yellow */
-    color: #333; /* Changed text color for contrast */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    background-color: #e0e0d0; /* Darker shade for hover */
-}
-
-/* Project Links (View Code on GitHub) */
-.project-links {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.project-links a {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 20px; /* Consistent padding */
-    background-color: #fefff1; /* Changed to light yellow */
-    color: #333; /* Changed text color for contrast */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: bold; /* Added bold to match main buttons */
-}
-
-.project-links a:hover {
-    background-color: #e0e0d0; /* Darker shade for hover */
-}
-
-/* Download Button (Resume Page) */
-.download-button {
-    display: inline-block;
-    background-color: #fefff1; /* Changed to light yellow */
-    color: #333; /* Changed text color for contrast */
-    padding: 10px 20px; /* Consistent padding */
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold; /* Consistent font-weight */
-    transition: background-color 0.3s ease;
-    margin-bottom: 25px;
-}
-.download-button:hover {
-    background-color: #e0e0d0; /* Darker shade for hover */
-}
-
 
 /* Footer */
 .footer {
