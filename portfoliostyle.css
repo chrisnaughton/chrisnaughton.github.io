@@ -92,9 +92,23 @@ p, ul, ol {
 }
 
 ul, ol {
-    padding-left: 25px;
-    text-align: left; /* Aligned lists to the left */
+    padding-left: 0; /* Removed default padding for lists */
+    text-align: left; /* Aligned the group of list items to the left */
+    list-style: none; /* Remove default bullet points/numbers */
 }
+
+ul li, ol li { /* Styling for individual list items as boxes */
+    display: inline-block; /* Allows items to sit next to each other and wrap */
+    background-color: #f0f0f0; /* Light grey background for the box */
+    color: #333; /* Dark text for contrast */
+    padding: 8px 15px; /* Padding inside the box */
+    margin: 5px; /* Space between boxes */
+    border-radius: 5px; /* Rounded corners for the box */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center text within each list item box */
+    vertical-align: top; /* Align items to the top if they have different heights */
+}
+
 
 .project-description { /* Specific for index page intro text */
     margin-bottom: 40px;
@@ -244,30 +258,13 @@ ul, ol {
     text-align: center; /* Centered footer text */
 }
 
-/* Styling for dashboard images and links */
-.dashboard-display {
-    max-width: 100%; /* Ensure it doesn't overflow container */
-    margin: 20px auto; /* Center the display block */
+/* Tableau specific styling adjustments (for Superstore page) */
+.tableauPlaceholder {
+    width: 100%; /* Ensure it takes full width of its container */
+    height: 800px; /* Adjust height as needed for your dashboard */
+    margin: 0 auto; /* Center the embed */
+    border: none;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Ensures image corners respect border-radius */
-    background-color: #ffffff; /* Background for the image container */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center image and button horizontally */
-}
-
-.dashboard-display img {
-    max-width: 100%; /* Image scales within its container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra space below image */
-    border-radius: 8px 8px 0 0; /* Rounded top corners */
-}
-
-.view-dashboard-link {
-    margin-top: 15px; /* Space between image and button */
-    margin-bottom: 20px; /* Space below the button */
-    display: inline-block; /* Allows margin auto for centering if parent is text-align center */
-    padding: 10px 20px; /* Consistent button padding */
-    width: auto; /* Allow button to size based on content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Hide any overflow */
 }
