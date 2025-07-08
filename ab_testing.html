@@ -16,42 +16,37 @@
 
         <div class="content-area">
             <h2>Project Overview</h2>
-            <p>This project analyzes the effectiveness of three distinct promotional strategies implemented by a fast-food chain using A/B/C testing methodology.
-                For this project we used the Fast Food Marketing Campaign A\B Test available on kaggle.</p>
-
+            <p>This project dives into the effectiveness of three different promotional strategies used by a fast-food chain, all tested through an A/B/C methodology. We used the "Fast Food Marketing Campaign A/B Test" dataset, which is available on Kaggle.</p>
 
             <div class="project-links">
-                <!-- Corrected GitHub link to use an absolute URL -->
                 <a href="https://github.com/chrisnaughton/Fast_Food_A-B_Testing" target="_blank">View Project Code on GitHub</a>
-                <!-- If you have a live notebook viewer (e.g., nbviewer.jupyter.org), link it here -->
-                <!-- <a href="https://nbviewer.jupyter.org/github/chrisnaughton/Fast_Food_A-B_Testing/blob/main/notebooks/Fast_Food_A-B_Testing.ipynb" target="_blank">View Notebook</a> -->
             </div>
 
             <h2>Project Objectives</h2>
             <ul>
-                <li><strong>Assess Statistical Significance:</strong> Determine if there are statistically significant differences in total sales performance among the three promotions.</li>
-                <li><strong>Identify Best Performers:</strong> Pinpoint which specific promotions perform better or worse than others.</li>
-                <li><strong>Provide Actionable Recommendations:</strong> Offer data-backed guidance for the fast-food chain's promotional strategy.</li>
+                <li><strong>Assess Significance:</strong> See if the total sales performance among the three promotions shows a statistically meaningful difference.</li>
+                <li><strong>Identify Top Performers:</strong> Figure out which promotions worked best, and which didn't.</li>
+                <li><strong>Actionable Advice:</strong> Provide clear, data-driven recommendations for the fast-food chain's future promotions.</li>
             </ul>
 
             <h2>Dataset</h2>
             <p>The analysis uses simulated sales data from a multi-week promotional campaign across various fast-food store locations. Key variables include:</p>
             <ul>
-                <li><code>MarketID</code> and <code>LocationID</code>: Identifiers for markets and individual stores.</li>
-                <li><code>MarketSize</code>: Categorical classification of the market (Small, Medium, Large).</li>
-                <li><code>AgeOfStore</code>: Store age in years.</li>
-                <li><code>Promotion</code>: The specific promotion assigned to the store (1, 2, or 3).</li>
-                <li><code>SalesInThousands</code>: Weekly sales, which was aggregated to <strong>Total Sales per Location</strong> as the primary outcome metric.</li>
+                <li><code>MarketID</code> and <code>LocationID</code>: Unique codes for markets and individual stores.</li>
+                <li><code>MarketSize</code>: How big the market is (Small, Medium, Large).</li>
+                <li><code>AgeOfStore</code>: How old the store is in years.</li>
+                <li><code>Promotion</code>: Which promotion the store received (1, 2, or 3).</li>
+                <li><code>SalesInThousands</code>: Weekly sales figures, which I grouped into <strong>Total Sales per Location</strong> to measure the main outcome.</li>
             </ul>
 
             <h2>Methodology</h2>
             <ul>
-                <li><strong>Data Preprocessing:</strong> Weekly sales data was aggregated to <code>Total Sales per Location</code> to represent each store as a single experimental unit.</li>
-                <li><strong>Exploratory Data Analysis (EDA):</strong> Visualizations (e.g., box plots) were used to understand sales distributions across promotion groups. Covariate balance checks were performed on <code>MarketSize</code> and <code>AgeOfStore</code> to ensure fair comparisons between groups.</li>
+                <li><strong>Data Preprocessing:</strong> I combined weekly sales data into <code>Total Sales per Location</code>, treating each store as a single unit for the experiment.</li>
+                <li><strong>Exploratory Data Analysis (EDA):</strong> I used visualizations like box plots to understand how sales were distributed across different promotions. I also checked <code>MarketSize</code> and <code>AgeOfStore</code> to ensure the groups were balanced for fair comparisons.</li>
                 <li><strong>Statistical Hypothesis Testing:</strong>
                     <ul>
-                        <li><strong>ANOVA (Analysis of Variance):</strong> An ANOVA test was conducted to determine if there was an overall statistically significant difference in mean total sales among the three promotion groups.</li>
-                        <li><strong>Tukey's HSD Post-Hoc Test:</strong> Since ANOVA indicated an overall significant difference, <strong>Tukey's Honestly Significant Difference (HSD) test</strong> was used for pairwise comparisons between promotions, controlling the family-wise error rate.</li>
+                        <li><strong>ANOVA (Analysis of Variance):</strong> I ran an ANOVA test to see if there was a statistically significant difference in average total sales across the three promotions.</li>
+                        <li><strong>Tukey's HSD Post-Hoc Test:</strong> Since ANOVA showed an overall difference, I used Tukey's Honestly Significant Difference (HSD) test for detailed, pairwise comparisons between promotions, making sure to control for overall error.</li>
                     </ul>
                 </li>
             </ul>
@@ -59,51 +54,51 @@
             <h2>Key Findings</h2>
             <p>The statistical analysis revealed clear differences in promotional effectiveness:</p>
             <ul>
-                <li><strong>Overall Significance:</strong> The ANOVA test showed a <strong>statistically significant difference</strong> in total sales among the three promotions (p-value &lt; 0.05), indicating that the promotion choice does impact sales.</li>
-                <li><strong>Promotion 2 Underperforms:</strong> Promotion 1 generated approximately <strong>$43,078 more</strong> in total sales per location than Promotion 2, a <strong>statistically significant</strong> difference (p &lt; 0.05). Similarly, Promotion 3 generated approximately <strong>$32,140 more</strong> than Promotion 2 (p &lt; 0.05).</li>
-                <li><strong>Promotion 1 and Promotion 3 are Similar:</strong> There was <strong>no statistically significant difference</strong> in total sales between Promotion 1 and Promotion 3 (p &gt; 0.05). Both performed similarly well.</li>
+                <li><strong>Overall Impact:</strong> The ANOVA test confirmed that the choice of promotion significantly impacts total sales (p-value &lt; 0.05).</li>
+                <li><strong>Promotion 2 Underperformed:</strong> Promotion 1 brought in about <strong>$43,078 more</strong> in sales per location than Promotion 2 (a statistically significant difference, p &lt; 0.05). Promotion 3 also outperformed Promotion 2 by roughly <strong>$32,140</strong> (p &lt; 0.05).</li>
+                <li><strong>Promotions 1 & 3 Similar:</strong> There was no significant difference in total sales between Promotion 1 and Promotion 3 (p &gt; 0.05); both performed equally well.</li>
             </ul>
 
             <h2>Recommendations</h2>
-            <p>Based on these findings, we recommend:</p>
+            <p>Based on these findings, I'd suggest the fast-food company:</p>
             <ul>
-                <li><strong>Discontinue Promotion 2:</strong> This promotion consistently leads to significantly lower sales and should be <strong>avoided</strong> in future campaigns.</li>
-                <li><strong>Focus on Promotions 1 and 3:</strong> Both are effective in driving sales and are statistically comparable. The choice between them should be based on other business considerations like cost or operational complexity.</li>
+                <li><strong>Drop Promotion 2:</strong> This promotion consistently resulted in much lower sales, so it should be stopped for future campaigns.</li>
+                <li><strong>Prioritize Promotions 1 and 3:</strong> Both are effective and statistically similar in driving sales. The final choice between them can depend on other factors like cost or how easy they are to run.</li>
             </ul>
 
             <h2>Limitations</h2>
             <ul>
-                <li><strong>No Cost Data:</strong> Lacks cost data for full ROI analysis of each promotion.</li>
-                <li><strong>Short Duration:</strong> The 4-week sales data limits insights into long-term effects or sustained impact.</li>
-                <li><strong>External Factors:</strong> Unmeasured external variables (e.g., local events, competitor activities) were not controlled.</li>
-                <li><strong>Covariate Balance:</strong> A slight imbalance in `MarketSize` distribution across groups could potentially confound results.</li>
-                <li><strong>Generalizability:</strong> Findings may not perfectly apply to all store locations or future campaigns without further validation.</li>
+                <li><strong>Missing Cost Data:</strong> We couldn't do a full ROI analysis without cost data for each promotion.</li>
+                <li><strong>Short Study Period:</strong> The 4-week sales data limits our understanding of long-term effects.</li>
+                <li><strong>Uncontrolled External Factors:</strong> Things like local events or competitor actions weren't accounted for.</li>
+                <li><strong>Market Size Imbalance:</strong> A small imbalance in <code>MarketSize</code> across groups might slightly affect the results.</li>
+                <li><strong>Limited Generalizability:</strong> These findings might not perfectly apply to all stores or future campaigns without more testing.</li>
             </ul>
 
             <h2>Future Work</h2>
             <p>To enhance this analysis and provide more robust recommendations, consider:</p>
             <ul>
-                <li><strong>Cost-Benefit Analysis:</strong> Integrate promotional cost data to determine the <strong>Return on Investment (ROI)</strong> for each strategy.</li>
-                <li><strong>Longer-Term Tracking:</strong> Conduct A/B tests over extended periods (e.g., 8-12 weeks) to assess sustained impact and customer behavior.</li>
-                <li><strong>Advanced Statistical Modeling:</strong> Utilize techniques like ANCOVA or mixed-effects models to explicitly control for confounding variables.</li>
-                <li><strong>Qualitative Feedback:</strong> Collect insights from store managers and customers regarding operational challenges and promotion appeal.</li>
-                <li><strong>Targeted A/B Test (P1 vs. P3):</strong> Design a dedicated, larger-scale A/B test specifically comparing Promotion 1 and Promotion 3 to uncover subtle differences if needed.</li>
+                <li><strong>Cost-Benefit Analysis:</strong> Add promotional cost data to calculate the <strong>Return on Investment (ROI)</strong> for each strategy.</li>
+                <li><strong>Longer-Term Tests:</strong> Run A/B tests for longer (e.g., 8-12 weeks) to see sustained impact and customer behavior.</li>
+                <li><strong>Advanced Modeling:</strong> Use techniques like ANCOVA or mixed-effects models to better control for other variables.</li>
+                <li><strong>Qualitative Feedback:</strong> Gather insights from store managers and customers about operational challenges and promotion appeal.</li>
+                <li><strong>Targeted A/B Test (P1 vs. P3):</strong> If needed, run a larger A/B test specifically comparing Promotion 1 and Promotion 3 to find subtle differences.</li>
             </ul>
 
             <h2>Technologies Used</h2>
             <ul>
                 <li><strong>Python</strong></li>
-                <li><strong>Pandas</strong> (for data manipulation)</li>
-                <li><strong>NumPy</strong> (for numerical operations)</li>
-                <li><strong>SciPy</strong> (for statistical tests)</li>
-                <li><strong>Statsmodels</strong> (for ANOVA and Tukey HSD)</li>
-                <li><strong>Matplotlib</strong> (for visualizations)</li>
-                <li><strong>Seaborn</strong> (for enhanced visualizations)</li>
-                <li><strong>Jupyter Notebook</strong> (for reproducible analysis)</li>
+                <li><strong>Pandas:</strong> For data manipulation.</li>
+                <li><strong>NumPy:</strong> For numerical operations.</li>
+                <li><strong>SciPy:</strong> For statistical tests.</li>
+                <li><strong>Statsmodels:</strong> For ANOVA and Tukey HSD.</li>
+                <li><strong>Matplotlib:</strong> For data visualizations.</li>
+                <li><strong>Seaborn:</strong> For enhanced visualizations.</li>
+                <li><strong>Jupyter Notebook:</strong> For reproducible analysis.</li>
             </ul>
 
             <h2>How to Run the Analysis</h2>
-            <p>To replicate and explore this project locally:</p>
+            <p>To try out this project on your own machine:</p>
             <div class="code-block">
                 <pre><code>git clone https://github.com/chrisnaughton/Fast_Food_A-B_Testing.git
 cd Fast_Food_A-B_Testing
@@ -111,15 +106,17 @@ pip install pandas numpy scipy statsmodels matplotlib seaborn jupyter
 jupyter notebook
                 </code></pre>
             </div>
-            <p><em>(Note: Ensure your dataset CSV file, e.g., `FAST_FOOD_Marketing-Campaign.csv`, is in the same directory as the Jupyter Notebook.)</em></p>
+            <p>(Just make sure your dataset CSV file, like <code>FAST_FOOD_Marketing-Campaign.csv</code>, is in the same folder as the Jupyter Notebook.)</p>
 
             <div class="nav-links">
                 <a href="index.html">Back to Portfolio Home</a>
             </div>
         </div>
         <div class="footer">
-            <p>Built with passion by Chris Naughton</p>
-            <p>Last Updated: July 1, 2025</p>
+            <p><strong>Contact Info</strong></p>
+            <p>Email: cnaught22@gmail.com</p>
+            <p>Phone: 301-943-6521</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/chris-naughton-8691a327a" target="_blank">www.linkedin.com/in/chris-naughton-8691a327a</a></p>
         </div>
     </div>
 </body>
