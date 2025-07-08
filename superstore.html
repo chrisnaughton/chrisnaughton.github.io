@@ -11,69 +11,75 @@
     <div class="container">
         <div class="banner-section">
             <img src="images/Super Store Banner.jpg" alt="Superstore Banner" class="banner-image">
-            </div>
+            <!-- The h1 with banner-title is removed as the image now serves as the banner -->
+        </div>
 
         <div class="content-area">
             <p>This project aims to uncover critical insights into sales performance, profit drivers, and customer behavior in a dataset for a fictional Super Store in the early 2010s.
+                The bullet points below each dashboard offer key explanations and context to help you understand the insights.
                 It uses the "Global Superstore Dataset" from Kaggle.
                 Please feel free to explore the interactive dashboards below:</p>
 
             <div class="project-links">
+                <!-- Corrected GitHub link to use an absolute URL -->
                 <a href="https://github.com/chrisnaughton/Superstore-Profitability-Analysis" target="_blank">View Project Code on GitHub</a>
-                </div>
+                <!-- Add link to your Tableau Public workbook if you want a direct link to the whole workbook -->
+                <!-- <a href="https://public.tableau.com/profile/chrisnaughton#!/vizhome/SQLDashboards/Dashboard1" target="_blank">View Full Workbook on Tableau Public</a> -->
+                <p class="text-gray-700 text-sm mt-2">You can find a list of the SQL queries used for this analysis on the GitHub repository.</p>
+            </div>
 
             <h2>Dashboard 1: Executive Overview & Business Health</h2>
-            <div class="dashboard-talking-points">
-                <ul>
-                    <li>Executive overview: **$12.6M sales**, **$1.47M profit**, **12% gross profit margin** (2011-2014).</li>
-                    <li>Quarterly sales/profit trends show **stable 12% margin** despite 100% sales growth; efficiency needed.</li>
-                    <li>Consumer segment leads sales, followed by Corporate; Home Office sales are lowest.</li>
-                </ul>
-            </div>
             <div class="dashboard-display">
                 <img src="images/Dashboard 1 Pic.png" alt="Superstore Dashboard 1: Executive Overview">
                 <a href="https://public.tableau.com/views/SQLDashboards/Dashboard1" target="_blank" class="view-dashboard-link">View Interactive Dashboard 1</a>
             </div>
-
-            <h2>Dashboard 2: Discount Impact & Transactional Loss</h2>
             <div class="dashboard-talking-points">
                 <ul>
-                    <li>Identifies **loss-leading products** (e.g., Tables, Machines) driven by discounts.</li>
-                    <li>Tables are major loss leaders; profit margin worsened to -12.5% (2014) due to **70-80% discounts**.</li>
-                    <li>Profit erosion in profitable categories (e.g., Binders) due to **extreme discounts** (-50% to -200% margins).</li>
-                    <li>Histogram and heatmap confirm **extreme discounts cause unprofitability**; highlights areas for discount review.</li>
+                    <li>Executive overview: <strong>$12.6M sales</strong>, <strong>$1.47M profit</strong>, <strong>12% gross profit margin</strong> (2011-2014).</li>
+                    <li>Quarterly sales/profit trends show <strong>stable 12% margin</strong> despite 100% sales growth; efficiency needed.</li>
+                    <li>Consumer segment leads sales, followed by Corporate; Home Office sales are lowest.</li>
                 </ul>
             </div>
+
+            <h2>Dashboard 2: Discount Impact & Transactional Loss</h2>
             <div class="dashboard-display">
                 <img src="images/Dashboard 2 Pic.png" alt="Superstore Dashboard 2: Discount Impact">
                 <a href="https://public.tableau.com/views/SQLDashboards-Discounts/Dashboard2" target="_blank" class="view-dashboard-link">View Interactive Dashboard 2</a>
             </div>
-
-            <h2>Dashboard 3: Geographic Performance & Profitability</h2>
             <div class="dashboard-talking-points">
                 <ul>
-                    <li>Reveals **geographic wins/losses**: consistent loss-leading regions include Dominican Republic, Nigeria, Zimbabwe, Uganda due to high discounts.</li>
-                    <li>Global profit map visualizes **worldwide profitability**, identifying strong/weak markets.</li>
-                    <li>Unprofitable sales (e.g., discounted Binders) originate from **specific US regions, Nigeria, Sweden**, indicating widespread discount misuse.</li>
+                    <li>Identifies <strong>loss-leading products</strong> (e.g., Tables, Machines) driven by discounts.</li>
+                    <li>Tables are major loss leaders; profit margin worsened to -12.5% (2014) due to <strong>excessive 70-80% discounts</strong>.</li>
+                    <li>Profit erosion in profitable categories (e.g., Binders) due to <strong>extreme discounts</strong> (-50% to -200% margins).</li>
+                    <li>Histogram and heatmap confirm <strong>extreme discounts cause unprofitability</strong>; highlights areas for discount review.</li>
                 </ul>
             </div>
+
+            <h2>Dashboard 3: Geographic Performance & Profitability</h2>
             <div class="dashboard-display">
                 <img src="images/Dashboard 3 Pic.png" alt="Superstore Dashboard 3: Geographic Performance">
                 <a href="https://public.tableau.com/views/SQLDashboards-Suggestions/Dashboard3" target="_blank" class="view-dashboard-link">View Interactive Dashboard 3</a>
             </div>
-
-            <h2>Dashboard 4: Strategic Opportunities & Overall Trends</h2>
             <div class="dashboard-talking-points">
                 <ul>
-                    <li>Identifies strategic opportunities: **highest profit sub-categories** are Paper, Copiers, and Phones.</li>
-                    <li>Pie chart shows **profit vs. loss ratio**; breakdown of loss-making items highlights attention areas.</li>
-                    <li>Sales by month show **clear seasonal patterns**, peaking in Q4 (Oct-Dec) with a Q1 dip.</li>
-                    <li>Average Lifetime Profit Per Customer: **~$922.93**. Consumer AOV declining, Home Office AOV growing (key for engagement).</li>
+                    <li>Reveals <strong>geographic wins/losses</strong>: consistent loss-leading regions include Dominican Republic, Nigeria, Zimbabwe, Uganda due to high discounts.</li>
+                    <li>Global profit map visualizes <strong>worldwide profitability</strong>, identifying strong/weak markets.</li>
+                    <li>Unprofitable sales (e.g., discounted Binders) originate from <strong>specific US regions, Nigeria, Sweden</strong>, indicating widespread discount misuse.</li>
                 </ul>
             </div>
+
+            <h2>Dashboard 4: Strategic Opportunities & Overall Trends</h2>
             <div class="dashboard-display">
                 <img src="images/Dashboard 4 Pic.png" alt="Superstore Dashboard 4: Strategic Opportunities">
                 <a href="https://public.tableau.com/views/SQLDashboards-Suggestions/Dashboard4" target="_blank" class="view-dashboard-link">View Interactive Dashboard 4</a>
+            </div>
+            <div class="dashboard-talking-points">
+                <ul>
+                    <li>Identifies strategic opportunities: <strong>highest profit sub-categories</strong> are Paper, Copiers, and Phones.</li>
+                    <li>Pie chart shows <strong>profit vs. loss ratio</strong>; breakdown of loss-making items highlights attention areas.</li>
+                    <li>Sales by month show <strong>clear seasonal patterns</strong>, peaking in Q4 (Oct-Dec) with a Q1 dip.</li>
+                    <li>Average Lifetime Profit Per Customer: <strong>~$922.93</strong>. Consumer AOV declining, Home Office AOV growing (key for engagement).</li>
+                </ul>
             </div>
 
             <div class="nav-links">
