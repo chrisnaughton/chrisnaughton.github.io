@@ -61,11 +61,7 @@ body {
 .content-area { /* Wrapper for main content with consistent padding */
     padding: 30px;
     text-align: center; /* Centered text for the content-area */
-    border: 1px solid #cccccc; /* Added border */
-    border-radius: 8px; /* Added border-radius */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Added subtle shadow */
-    margin: 20px auto; /* Added margin to separate it from container edges */
-    background-color: #ffffff; /* Added background to make the box stand out */
+    /* Removed border, border-radius, box-shadow, margin, and background-color */
 }
 
 /* Headings and Paragraphs */
