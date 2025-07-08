@@ -61,7 +61,6 @@ body {
 .content-area { /* Wrapper for main content with consistent padding */
     padding: 30px;
     text-align: center; /* Centered text for the content-area */
-    /* Removed border, border-radius, box-shadow, margin, and background-color */
 }
 
 /* Headings and Paragraphs */
@@ -93,7 +92,7 @@ p, ul, ol {
 }
 
 ul, ol {
-    padding-left: 25px; /* Reverted to original padding */
+    padding-left: 25px;
     text-align: left; /* Aligned lists to the left */
     list-style: disc; /* Reverted to default bullet points for unordered lists */
 }
@@ -141,6 +140,12 @@ ul li, ol li { /* Added for spacing between list items */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* General link styling */
+a {
+    color: #60A5FA; /* A lighter shade of blue */
+    text-decoration: underline; /* Keep underline for clarity */
+}
+
 /* Common Button Styling - Applied to all button-like links */
 .common-button-style,
 .nav-links a,
@@ -152,10 +157,10 @@ ul li, ol li { /* Added for spacing between list items */
     align-items: center; /* Center text vertically */
     justify-content: center; /* Center text horizontally */
     background-color: #004d00; /* Dark green */
-    color: white; /* Changed text color for contrast */
+    color: white; /* Changed text color for contrast - this overrides the general 'a' color */
     padding: 10px 20px; /* Consistent padding */
     border-radius: 5px;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline for buttons */
     font-weight: bold;
     transition: background-color 0.3s ease;
     box-sizing: border-box; /* Include padding in width calculation */
