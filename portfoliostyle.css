@@ -139,7 +139,8 @@ ul, ol {
 .nav-links a,
 .project-links a,
 .download-button,
-.project-card .button {
+.project-card .button,
+.view-dashboard-link { /* Added .view-dashboard-link */
     display: flex; /* Use flexbox for vertical centering */
     align-items: center; /* Center text vertically */
     justify-content: center; /* Center text horizontally */
@@ -160,7 +161,8 @@ ul, ol {
 .nav-links a:hover,
 .project-links a:hover,
 .download-button:hover,
-.project-card .button:hover {
+.project-card .button:hover,
+.view-dashboard-link:hover { /* Added .view-dashboard-link */
     background-color: #003300; /* Darker green for hover */
 }
 
@@ -242,15 +244,30 @@ ul, ol {
     text-align: center; /* Centered footer text */
 }
 
-/* Tableau specific styling adjustments (for Superstore page) */
-/* Reverted to original styling for TableauPlaceholder */
-.tableauPlaceholder {
-    width: 100%; /* Ensure it takes full width of its container */
-    height: 800px; /* Adjust height as needed for your dashboard */
-    margin: 0 auto; /* Center the embed */
-    border: none;
+/* Styling for dashboard images and links */
+.dashboard-display {
+    max-width: 100%; /* Ensure it doesn't overflow container */
+    margin: 20px auto; /* Center the display block */
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    overflow: hidden; /* Hide any overflow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures image corners respect border-radius */
+    background-color: #ffffff; /* Background for the image container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center image and button horizontally */
 }
-/* Removed .tableauPlaceholder object styles */
+
+.dashboard-display img {
+    max-width: 100%; /* Image scales within its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.view-dashboard-link {
+    margin-top: 15px; /* Space between image and button */
+    margin-bottom: 20px; /* Space below the button */
+    display: inline-block; /* Allows margin auto for centering if parent is text-align center */
+    padding: 10px 20px; /* Consistent button padding */
+    width: auto; /* Allow button to size based on content */
+}
