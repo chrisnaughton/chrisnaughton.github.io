@@ -92,22 +92,12 @@ p, ul, ol {
 }
 
 ul, ol {
-    padding-left: 0; /* Removed default padding for lists */
-    text-align: left; /* Aligned the group of list items to the left */
-    list-style: none; /* Remove default bullet points/numbers */
+    padding-left: 25px; /* Reverted to original padding */
+    text-align: left; /* Aligned lists to the left */
+    list-style: disc; /* Reverted to default bullet points for unordered lists */
 }
 
-ul li, ol li { /* Styling for individual list items as boxes */
-    display: inline-block; /* Allows items to sit next to each other and wrap */
-    background-color: #f0f0f0; /* Light grey background for the box */
-    color: #333; /* Dark text for contrast */
-    padding: 8px 15px; /* Padding inside the box */
-    margin: 5px; /* Space between boxes */
-    border-radius: 5px; /* Rounded corners for the box */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    text-align: center; /* Center text within each list item box */
-    vertical-align: top; /* Align items to the top if they have different heights */
-}
+/* Removed specific styling for ul li, ol li that created boxes */
 
 
 .project-description { /* Specific for index page intro text */
