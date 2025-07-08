@@ -98,7 +98,9 @@ ul, ol {
     list-style: disc; /* Reverted to default bullet points for unordered lists */
 }
 
-/* Removed specific styling for ul li, ol li that created boxes */
+ul li, ol li { /* Added for spacing between list items */
+    margin-bottom: 5px; /* Add space below each list item */
+}
 
 
 .project-description { /* Specific for index page intro text */
